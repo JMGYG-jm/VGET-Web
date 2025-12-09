@@ -405,7 +405,825 @@
         .records-table tr:hover {
             background-color: #222;
         }
+                /* 义警大佬视频展示 */
+        #video-showcase {
+            position: relative;
+            overflow: hidden;
+        }
         
+        #video-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.05) 0%, rgba(255, 51, 51, 0.05) 100%);
+            z-index: -1;
+        }
+        
+        .showcase-container {
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.95), rgba(15, 15, 15, 0.95));
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 
+                0 10px 40px rgba(0, 0, 0, 0.6),
+                inset 0 0 0 1px rgba(255, 204, 0, 0.1),
+                0 0 30px rgba(255, 204, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 204, 0, 0.2);
+        }
+        
+        .showcase-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                #ffcc00 0%, 
+                #ff9900 25%, 
+                #ff3333 50%, 
+                #ff9900 75%, 
+                #ffcc00 100%);
+            animation: gradientMove 3s linear infinite;
+            background-size: 200% 100%;
+        }
+        
+        .showcase-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .showcase-header-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #ffcc00, #ff3333);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #0a0a0a;
+            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.4);
+        }
+        
+        .showcase-header h3 {
+            font-size: 32px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(255, 204, 0, 0.3);
+            background: linear-gradient(135deg, #ffcc00, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .showcase-header .subtitle {
+            color: #cccccc;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* 视频表格样式 */
+        .video-table-container {
+            overflow-x: auto;
+            margin-top: 30px;
+        }
+        
+        .video-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .video-table thead {
+            background: linear-gradient(135deg, #ffcc00, #e6b800);
+        }
+        
+        .video-table th {
+            padding: 18px 20px;
+            text-align: left;
+            color: #0a0a0a;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 16px;
+            position: relative;
+        }
+        
+        .video-table th i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .video-table th::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.3), transparent);
+        }
+        
+        .video-table tbody tr {
+            border-bottom: 1px solid rgba(255, 204, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .video-table tbody tr:hover {
+            background: rgba(255, 204, 0, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.1);
+        }
+        
+        .video-table td {
+            padding: 18px 20px;
+            color: #f1f1f1;
+            vertical-align: middle;
+        }
+        
+        .video-title {
+            font-weight: 600;
+            color: #ffcc00;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .video-title i {
+            font-size: 14px;
+            color: #ffcc00;
+        }
+        
+        .player-id {
+            color: #cccccc;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 6px 12px;
+            background: rgba(255, 204, 0, 0.1);
+            border-radius: 20px;
+            display: inline-block;
+            border: 1px solid rgba(255, 204, 0, 0.2);
+        }
+        
+        .video-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #ff3333, #ff9900);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 51, 51, 0.2);
+        }
+        
+        .video-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 51, 51, 0.4);
+            background: linear-gradient(135deg, #ff9900, #ff3333);
+        }
+        
+        .video-link i {
+            font-size: 16px;
+        }
+        
+        /* 空状态提示 */
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            opacity: 0.5;
+        }
+        
+        .empty-state p {
+            font-size: 16px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .showcase-container {
+                padding: 25px;
+            }
+            
+            .showcase-header-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+            
+            .showcase-header h3 {
+                font-size: 24px;
+            }
+            
+            .video-table th, 
+            .video-table td {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+            
+            .video-title {
+                font-size: 14px;
+            }
+            
+            .video-link {
+                padding: 8px 15px;
+                font-size: 13px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .showcase-container {
+                padding: 20px;
+            }
+            
+            .video-table {
+                font-size: 13px;
+            }
+            
+            .video-table th i {
+                display: none;
+            }
+        }
+                /* 建议反馈样式 - 美化版 */
+        #suggestion {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #suggestion::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.05) 0%, rgba(255, 51, 51, 0.05) 100%);
+            z-index: -1;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #ffcc00;
+            font-size: 18px;
+            margin-top: 10px;
+            opacity: 0.8;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .suggestion-container {
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.95), rgba(15, 15, 15, 0.95));
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 
+                0 10px 40px rgba(0, 0, 0, 0.6),
+                inset 0 0 0 1px rgba(255, 204, 0, 0.1),
+                0 0 30px rgba(255, 204, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 204, 0, 0.2);
+        }
+        
+        .suggestion-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                #ffcc00 0%, 
+                #ff9900 25%, 
+                #ff3333 50%, 
+                #ff9900 75%, 
+                #ffcc00 100%);
+            animation: gradientMove 3s linear infinite;
+            background-size: 200% 100%;
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* 标题区域 */
+        .suggestion-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .header-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #ffcc00, #ff3333);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: #0a0a0a;
+            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .suggestion-header h3 {
+            font-size: 32px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(255, 204, 0, 0.3);
+            background: linear-gradient(135deg, #ffcc00, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .suggestion-header .subtitle {
+            color: #cccccc;
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .decoration-line {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .line-dot {
+            width: 8px;
+            height: 8px;
+            background: #ffcc00;
+            border-radius: 50%;
+            animation: dotPulse 1.5s infinite;
+        }
+        
+        .line-dot:nth-child(2) { animation-delay: 0.3s; }
+        .line-dot:nth-child(3) { animation-delay: 0.6s; }
+        
+        @keyframes dotPulse {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% { 
+                transform: scale(1.5);
+                opacity: 1;
+            }
+        }
+        
+        /* 表单样式 */
+        .suggestion-form .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .suggestion-form .form-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #ffcc00;
+            font-size: 16px;
+        }
+        
+        .suggestion-form .form-label i {
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .required-badge, .optional-badge {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 8px;
+        }
+        
+        .required-badge {
+            background: rgba(255, 51, 51, 0.2);
+            color: #ff6666;
+            border: 1px solid rgba(255, 51, 51, 0.3);
+        }
+        
+        .optional-badge {
+            background: rgba(102, 102, 102, 0.2);
+            color: #888;
+            border: 1px solid rgba(102, 102, 102, 0.3);
+        }
+        
+        /* 分类选择器 */
+        .category-selector {
+            position: relative;
+        }
+        
+        .category-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        .category-option {
+            background: rgba(40, 40, 40, 0.8);
+            border: 2px solid rgba(255, 204, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            color: #cccccc;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .category-option i {
+            font-size: 24px;
+            color: #ffcc00;
+            transition: all 0.3s;
+        }
+        
+        .category-option:hover {
+            transform: translateY(-3px);
+            border-color: #ffcc00;
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.2);
+            background: rgba(255, 204, 0, 0.1);
+        }
+        
+        .category-option.active {
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.2), rgba(255, 51, 51, 0.2));
+            border-color: #ffcc00;
+            color: #ffcc00;
+            box-shadow: 0 5px 20px rgba(255, 204, 0, 0.3);
+        }
+        
+        .category-option.active i {
+            color: #ffcc00;
+            transform: scale(1.2);
+        }
+        
+        /* 文本区域和输入框 */
+        .textarea-container, .input-container {
+            position: relative;
+        }
+        
+        .textarea-container::before, .input-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ffcc00, #ff3333, #ffcc00);
+            border-radius: 8px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .textarea-container:focus-within::before,
+        .input-container:focus-within::before {
+            opacity: 0.3;
+            animation: borderGlow 2s infinite;
+        }
+        
+        @keyframes borderGlow {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.4; }
+        }
+        
+        .suggestion-form textarea, 
+        .suggestion-form input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.9);
+            border: 2px solid rgba(255, 204, 0, 0.3);
+            border-radius: 8px;
+            font-size: 15px;
+            color: #f1f1f1;
+            transition: all 0.3s;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .suggestion-form textarea {
+            min-height: 150px;
+            resize: vertical;
+            font-family: inherit;
+            line-height: 1.6;
+        }
+        
+        .suggestion-form textarea:focus, 
+        .suggestion-form input:focus {
+            outline: none;
+            border-color: #ffcc00;
+            box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.1);
+        }
+        
+        .form-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .character-count {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .character-count.warning {
+            color: #ff9800;
+        }
+        
+        .character-count.error {
+            color: #ff3333;
+        }
+        
+        .character-count i {
+            font-size: 12px;
+        }
+        
+        .hint-text {
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .hint-text i {
+            font-size: 12px;
+        }
+        
+        /* 提交按钮区域 */
+        .submit-container {
+            margin: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .suggestion-form .submit-btn {
+            position: relative;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #ffcc00, #e6b800);
+            color: #0a0a0a;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            overflow: hidden;
+        }
+        
+        .btn-glow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        
+        .suggestion-form .submit-btn:hover:not(:disabled) {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 10px 30px rgba(255, 204, 0, 0.5),
+                0 0 20px rgba(255, 204, 0, 0.3);
+            background: linear-gradient(135deg, #e6b800, #ffcc00);
+        }
+        
+        .suggestion-form .submit-btn:hover:not(:disabled) .btn-glow {
+            opacity: 1;
+            animation: glowMove 3s linear infinite;
+        }
+        
+        @keyframes glowMove {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .suggestion-form .submit-btn:disabled {
+            background: #444;
+            color: #888;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .suggestion-form .submit-btn:disabled i {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .submit-hint {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        /* 消息提示 */
+               /* 消息提示 */
+        .message-container {
+            margin: 20px 0;
+        }
+        
+        .success-message, .error-message {
+            display: none;
+            padding: 20px;
+            border-radius: 12px;
+            animation: slideIn 0.5s ease;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .success-message.show, 
+        .error-message.show {
+            display: flex;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .success-message {
+            background: linear-gradient(135deg, rgba(82, 196, 26, 0.1), rgba(82, 196, 26, 0.05));
+            border: 1px solid rgba(82, 196, 26, 0.3);
+        }
+        
+        .error-message {
+            background: linear-gradient(135deg, rgba(255, 77, 79, 0.1), rgba(255, 77, 79, 0.05));
+            border: 1px solid rgba(255, 77, 79, 0.3);
+        }
+        
+        .message-icon {
+            flex-shrink: 0;
+        }
+        
+        .success-message .message-icon i {
+            color: #52c41a;
+            font-size: 32px;
+        }
+        
+        .error-message .message-icon i {
+            color: #ff4d4f;
+            font-size: 32px;
+        }
+        
+        .message-content h4 {
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .success-message .message-content h4 {
+            color: #52c41a;
+        }
+        
+        .error-message .message-content h4 {
+            color: #ff4d4f;
+        }
+        
+        .message-content p {
+            color: #aaaaaa;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        /* 底部信息 */
+        .form-footer-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 204, 0, 0.1);
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+            font-size: 13px;
+        }
+        
+        .info-item i {
+            color: #ffcc00;
+            font-size: 14px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .suggestion-container {
+                padding: 25px;
+                border-radius: 15px;
+            }
+            
+            .header-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+            
+            .suggestion-header h3 {
+                font-size: 24px;
+            }
+            
+            .category-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .form-footer-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .suggestion-form .submit-btn {
+                padding: 15px;
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .suggestion-container {
+                padding: 20px;
+            }
+            
+            .category-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .suggestion-header h3 {
+                font-size: 20px;
+            }
+        }
         /* 练习差事 */
         .practices {
             display: grid;
@@ -612,6 +1430,7 @@
                     <li><a href="#about">关于帮会</a></li>
                     <li><a href="#ranks">成员等级</a></li>
                     <li><a href="#records">任务记录</a></li>
+                    <li><a href="#video-showcase">大佬视频</a></li>
                     <li><a href="#practices">练习差事</a></li>
                     <li><a href="#contact">加入我们</a></li>
                 </ul>
@@ -626,6 +1445,26 @@
             <div class="subtitle">VGET</div>
             <p>成立于2025年，为所有热爱义警的玩家提供专业平台</p>
             <a href="#contact" class="btn">立即加入</a>
+        </div>
+    </section>
+     <!-- 联系方式 -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>加入我们</h2>
+            </div>
+            <div class="contact-content">
+                <p>如果您对义警充满热情，并希望加入ViGi Elite Team</p>
+                <p>请通过以下方式联系我们：</p>
+                <div class="qq-group">
+                    <h3>帮会QQ群</h3>
+                    <div class="qq-number">1067206166</div>
+                    <p>加入群聊后，请认真查看群公告</p>
+                </div>
+                
+                <p>我们期待您的加入！</p>
+                <a href="#" class="btn">复制QQ群号</a>
+            </div>
         </div>
     </section>
     
@@ -770,7 +1609,7 @@
     </section>
     
     <!-- 任务记录 -->
-    <section id="records">
+    <《section id="records">
         <div class="container">
             <div class="section-title">
                 <h2>任务记录</h2>
@@ -800,22 +1639,241 @@
                         </tr>
                         <tr>
                             <td>七叶树-雷通峡谷</td>
-                            <td>1:03</td>
+                            <td>1:01</td>
                             <td>____Mgonal____</td>
-							<td><a href=https://www.bilibili.com/video/BV15BWBz5Eq2/?spm_id_from=333.1387.upload.video_card.click&vd_source=b9313ac9c61ab5d9581ff288676b6858 class="practice-link" target="_blank">点击跳转(15:05)</a></td>
+							<td><a href=“https://www.bilibili.com/video/BV1nHmnB1Eak/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32” class="practice-link" target="_blank">点击跳转</a></td>
                         </tr>
                         <tr>
                             <td>七叶树-沙滩海岸</td>
-                            <td>1:04</td>
-                            <td>___Stellaa___</td>
-							<td><a href="https://www.bilibili.com/video/BV1GDWMz9Ez2/?spm_id_from=333.337.search-card.all.click&vd_source=b9313ac9c61ab5d9581ff288676b6858" class="practice-link" target="_blank">点击跳转</a></td>
+                            <td>1:00</td>
+                            <td>____Mgonal____</td>
+							<td><a href="https://www.bilibili.com/video/BV1TL2DBMEhK/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="practice-link" target="_blank">点击跳转</a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
-    
+            
+    <!-- 义警大佬视频展示 -->
+    <section id="video-showcase">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-video"></i> 义警大佬视频展示</h2>
+                <p class="section-subtitle">欣赏顶尖玩家的义警精彩瞬间</p>
+            </div>
+            
+            <div class="showcase-container">
+                <div class="showcase-header">
+                    <div class="showcase-header-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>大佬精彩视频作品</h3>
+                    <p class="subtitle">享受丝滑的操作</p>
+                </div>
+                
+                <div class="video-table-container">
+                    <table class="video-table">
+                        <thead>
+                            <tr>
+                                <th><i class="fas fa-heading"></i> 视频标题</th>
+                                <th><i class="fas fa-user-ninja"></i> 大佬ID</th>
+                                <th><i class="fas fa-external-link-alt"></i> 视频链接</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="video-title">
+                                        <i class="fas fa-play-circle"></i>
+                                        超强一称盲视野上银行
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="player-id">__1der__</span>
+                                </td>
+                                <td>
+                                    <a href="https://www.bilibili.com/video/BV1h4y5BTEoa/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        观看视频
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- 更多视频提示 -->
+                <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 204, 0, 0.1);">
+                    <p style="color: #666; font-size: 14px;">
+                        <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
+                        想要展示您的义警操作？联系我们上传您的精彩视频！
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 建议反馈 -->
+    <section id="suggestion">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-comment-dots"></i> 建议反馈</h2>
+                <p class="section-subtitle">您的意见是我们进步的动力</p>
+            </div>
+            
+            <div class="suggestion-container">
+                <!-- 炫酷标题区域 -->
+                <div class="suggestion-header">
+                    <div class="header-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>网站建议系统</h3>
+                    <p class="subtitle">ViGi Elite Team 期待您的宝贵意见</p>
+                    <div class="decoration-line">
+                        <span class="line-dot"></span>
+                        <span class="line-dot"></span>
+                        <span class="line-dot"></span>
+                    </div>
+                </div>
+                
+                <!-- 表单区域 -->
+                <div class="suggestion-form">
+                    <!-- 建议类型选择 -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <i class="fas fa-tag"></i>
+                            <span>建议类型</span>
+                            <span class="required-badge">必填</span>
+                        </label>
+                        <div class="category-selector">
+                            <div class="category-options">
+                                <button type="button" class="category-option" data-value="design" onclick="selectCategory(this)">
+                                    <i class="fas fa-palette"></i>
+                                    <span>任务记录新路线</span>
+                                </button>
+                                <button type="button" class="category-option" data-value="content" onclick="selectCategory(this)">
+                                    <i class="fas fa-edit"></i>
+                                    <span>任务记录新纪录</span>
+                                </button>
+                                <button type="button" class="category-option" data-value="feature" onclick="selectCategory(this)">
+                                    <i class="fas fa-cogs"></i>
+                                    <span>求差事或训练图</span>
+                                </button>
+                                <button type="button" class="category-option" data-value="bug" onclick="selectCategory(this)">
+                                    <i class="fas fa-bug"></i>
+                                    <span>添加差事或训练图</span>
+                                </button>
+                                <button type="button" class="category-option" data-value="other" onclick="selectCategory(this)">
+                                    <i class="fas fas fa-video"></i>
+                                    <span>精彩作品提交</span>
+                                </button>
+                                <button type="button" class="category-option" data-value="other" onclick="selectCategory(this)">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                    <span>其他建议</span>
+                                </button>
+                            </div>
+                            <input type="hidden" id="category" required>
+                        </div>
+                    </div>
+                    
+                    <!-- 建议内容 -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <i class="fas fa-comment-alt"></i>
+                            <span>建议内容</span>
+                            <span class="required-badge">必填</span>
+                        </label>
+                        <div class="textarea-container">
+                            <textarea 
+                                id="suggestion-text" 
+                                placeholder="如果您有其他的差事，练习图需要可以在这里写建议，我看到的话会加到官网里，或者您有想要添加到官网里的差事也可以在这里写出来，我会添加到官网里（记得加上差事链接），署名我会加上你的ID。如果有新的任务记录或路线的话也可以写在这里"
+                                maxlength="500"
+                                required
+                            ></textarea>
+                            <div class="textarea-decoration"></div>
+                        </div>
+                        <div class="form-footer">
+                            <div class="character-count" id="charCountContainer">
+                                <i class="fas fa-text-height"></i>
+                                <span id="charCount">0</span>/500
+                            </div>
+                            <div class="hint-text">
+                                <i class="fas fa-info-circle"></i>
+                                至少5个字符
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 称呼输入 -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <i class="fas fa-user"></i>
+                            <span>您的称呼</span>
+                            <span class="optional-badge">可选</span>
+                        </label>
+                        <div class="input-container">
+                            <input 
+                                type="text" 
+                                id="suggestion-name" 
+                                placeholder="如何称呼您？"
+                                maxlength="20"
+                            >
+                            <div class="input-decoration"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 提交按钮 -->
+                    <div class="submit-container">
+                        <button class="submit-btn" onclick="submitSuggestion()" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>提交建议</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                        <div class="submit-hint">
+                            <i class="fas fa-keyboard"></i>
+                            快捷键：Ctrl + Enter
+                        </div>
+                    </div>
+                    
+                    <!-- 消息提示 -->
+                    <div class="message-container">
+                        <div class="success-message" id="successMessage">
+                            <div class="message-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="message-content">
+                                <h4>提交成功！</h4>
+                                <p>感谢您的建议，我们已经收到并会尽快处理</p>
+                            </div>
+                        </div>
+                        
+                        <div class="error-message" id="errorMessage">
+                            <div class="message-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="message-content">
+                                <h4>提交失败</h4>
+                                <p id="errorText">请检查表单内容后重试</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 底部信息 -->
+                    <div class="form-footer-info">
+                        <div class="info-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>您的信息将严格保密</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-heart"></i>
+                            <span>感谢您对VGET的支持</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- 练习差事 -->
  <section id="practices">
       <div class="container">
@@ -1338,27 +2396,7 @@
  							    </div>
  							</section>
     
-    <!-- 联系方式 -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>加入我们</h2>
-            </div>
-            <div class="contact-content">
-                <p>如果您对义警充满热情，并希望加入ViGi Elite Team</p>
-                <p>请通过以下方式联系我们：</p>
-                <div class="qq-group">
-                    <h3>帮会QQ群</h3>
-                    <div class="qq-number">1067206166</div>
-                    <p>加入群聊后，请认真查看群公告</p>
-                </div>
-                
-                <p>我们期待您的加入！</p>
-                <a href="#" class="btn">复制QQ群号</a>
-            </div>
-        </div>
-    </section>
-    
+   
     <!-- 页脚 -->
     <footer>
         <div class="container">
@@ -1398,6 +2436,262 @@
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+                // 初始化建议系统
+        document.addEventListener('DOMContentLoaded', function() {
+            // 确保消息框初始隐藏
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            if (successMsg) successMsg.style.display = 'none';
+            if (errorMsg) errorMsg.style.display = 'none';
+            
+            // 初始字符计数
+            updateCharCount();
+            
+            // ... 其他初始化代码 ...
+        });
+        // ============ 建议系统功能 ============
+        // Formspree配置 - 替换为您的Formspree表单ID
+        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwpgnzqo';
+        
+        // 分类选择功能
+        function selectCategory(element) {
+            // 移除所有选项的active类
+            document.querySelectorAll('.category-option').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // 为当前选项添加active类
+            element.classList.add('active');
+            
+            // 设置隐藏输入框的值
+            const categoryInput = document.getElementById('category');
+            categoryInput.value = element.dataset.value;
+            
+            // 添加点击动画
+            element.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                element.style.transform = '';
+            }, 150);
+        }
+        
+        // 字符计数
+        function updateCharCount() {
+            const textarea = document.getElementById('suggestion-text');
+            const charCount = document.getElementById('charCount');
+            const container = document.getElementById('charCountContainer');
+            
+            if (!textarea || !charCount || !container) return;
+            
+            const length = textarea.value.length;
+            charCount.textContent = length;
+            
+            container.className = 'character-count';
+            if (length > 400) {
+                container.classList.add('warning');
+            }
+            if (length > 480) {
+                container.classList.add('error');
+            }
+        }
+        
+        // 获取建议类型文本
+        function getCategoryText(category) {
+            const categories = {
+                'design': '网站设计',
+                'content': '内容更新',
+                'feature': '功能建议',
+                'bug': '问题反馈',
+                'other': '其他建议'
+            };
+            return categories[category] || '未知类型';
+        }
+        
+        // 提交建议到Formspree
+        async function submitSuggestion() {
+            const category = document.getElementById('category').value;
+            const suggestion = document.getElementById('suggestion-text').value.trim();
+            const name = document.getElementById('suggestion-name').value.trim();
+            
+            // 验证
+            if (!category) {
+                showSuggestionError('请选择建议类型');
+                document.getElementById('category').focus();
+                return;
+            }
+            
+            if (!suggestion) {
+                showSuggestionError('请填写建议内容');
+                document.getElementById('suggestion-text').focus();
+                return;
+            }
+            
+            if (suggestion.length < 5) {
+                showSuggestionError('建议内容太短，请详细描述（至少5个字符）');
+                document.getElementById('suggestion-text').focus();
+                return;
+            }
+            
+            // 禁用按钮，防止重复提交
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>正在提交...</span>';
+            
+            // 清除错误信息
+            hideSuggestionError();
+            
+            try {
+                // 准备表单数据
+                const formData = new FormData();
+                formData.append('category', getCategoryText(category));
+                formData.append('suggestion', suggestion);
+                if (name) formData.append('name', name);
+                formData.append('_subject', `[VGET网站建议] ${getCategoryText(category)}`);
+                formData.append('_replyto', name ? `${name} <noreply@vget.com>` : '匿名用户 <noreply@vget.com>');
+                
+                // 添加时间戳和额外信息
+                formData.append('timestamp', new Date().toLocaleString('zh-CN'));
+                formData.append('page', window.location.href);
+                
+                // 发送到Formspree
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // 提交成功
+                    showSuggestionSuccess();
+                    resetSuggestionForm();
+                } else {
+                    const errorData = await response.json();
+                    showSuggestionError('提交失败：' + (errorData.error || '请稍后重试'));
+                }
+            } catch (error) {
+                console.error('提交错误:', error);
+                showSuggestionError('网络错误，请检查网络连接后重试');
+            } finally {
+                // 3秒后恢复按钮
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i><span>提交建议</span>';
+                }, 3000);
+            }
+        }
+        
+        // 显示成功消息
+        function showSuggestionSuccess() {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'flex';
+            
+            // 5秒后自动隐藏
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        }
+        
+        // 显示错误消息
+        function showSuggestionError(message) {
+            const errorMsg = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            
+            errorText.textContent = message;
+            errorMsg.style.display = 'flex';
+            
+            // 自动滚动到错误信息
+            errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // 5秒后自动隐藏
+            setTimeout(() => {
+                hideSuggestionError();
+            }, 5000);
+        }
+        
+        // 隐藏错误消息
+        function hideSuggestionError() {
+            const errorMsg = document.getElementById('errorMessage');
+            if (errorMsg) {
+                errorMsg.style.display = 'none';
+            }
+        }
+        
+        // 重置表单
+        function resetSuggestionForm() {
+            const category = document.getElementById('category');
+            const suggestionText = document.getElementById('suggestion-text');
+            const name = document.getElementById('suggestion-name');
+            
+            if (category) category.value = '';
+            if (suggestionText) suggestionText.value = '';
+            if (name) name.value = '';
+            
+            // 清除选择的分类按钮
+            document.querySelectorAll('.category-option').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            updateCharCount();
+        }
+        
+        // 初始化建议系统
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始字符计数
+            updateCharCount();
+            
+            // 监听建议文本框输入
+            const suggestionText = document.getElementById('suggestion-text');
+            if (suggestionText) {
+                suggestionText.addEventListener('input', updateCharCount);
+            }
+            
+            // 添加键盘快捷键
+            document.addEventListener('keydown', function(e) {
+                // Ctrl + Enter 提交建议
+                if (e.ctrlKey && e.key === 'Enter' && 
+                    document.activeElement.id === 'suggestion-text') {
+                    const btn = document.getElementById('submitBtn');
+                    if (btn && !btn.disabled) {
+                        submitSuggestion();
+                    }
+                }
+            });
+            
+            // 为所有输入框添加焦点效果
+            const inputs = document.querySelectorAll('.suggestion-form input, .suggestion-form textarea');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.classList.remove('focused');
+                });
+            });
+            
+            // 表单字段自动保存到本地存储（防止意外关闭）
+            const formFields = ['category', 'suggestion-text', 'suggestion-name'];
+            
+            formFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    // 加载保存的值
+                    const savedValue = localStorage.getItem(`suggestion_${fieldId}`);
+                    if (savedValue && fieldId !== 'category') {
+                        field.value = savedValue;
+                    } else if (savedValue && fieldId === 'category') {
+                        field.value = savedValue;
+                    }
+                    
+                    // 保存输入的值
+                    field.addEventListener('input', function() {
+                        localStorage.setItem(`suggestion_${fieldId}`, this.value);
                     });
                 }
             });
