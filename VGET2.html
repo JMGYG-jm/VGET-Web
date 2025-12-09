@@ -418,7 +418,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(10, 10, 10, 0.7), ,);
+            background: linear-gradient(rgba(10, 10, 10, 0.7), );
             z-index: -1;
         }
         
@@ -681,7 +681,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(10, 10, 10, 0.7),));
+            background: linear-gradient(rgba(10, 10, 10, 0.7),);
             z-index: -1;
         }
         
@@ -1627,7 +1627,7 @@
                     <tbody>
                         <tr>
                             <td>太平洋信号</td>
-                            <td>3::24</td>
+                            <td>3:24</td>
                             <td>____Mgonal____</td>
 							<td><a href="https://www.bilibili.com/video/BV1JLxgzVETB/?spm_id_from=333.337.search-card.all.click" class="practice-link" target="_blank">点击跳转</a></td>
                         </tr>
@@ -1653,7 +1653,7 @@
                 </table>
             </div>
         </div>
-    </《section>
+    </section>
             
     <!-- 义警大佬视频展示 -->
     <section id="video-showcase">
@@ -1715,165 +1715,191 @@
         </div>
     </section>
     <!-- 建议反馈 -->
-    <section id="suggestion">
-        <div class="container">
-            <div class="section-title">
-                <h2><i class="fas fa-comment-dots"></i> 建议反馈</h2>
-                <p class="section-subtitle">您的意见是我们进步的动力</p>
+  <!-- 建议反馈 -->
+<section id="suggestion">
+    <div class="container">
+        <div class="section-title">
+            <h2><i class="fas fa-comment-dots"></i> 建议反馈</h2>
+            <p class="section-subtitle">您的意见是我们进步的动力</p>
+        </div>
+        
+        <div class="suggestion-container">
+            <!-- 炫酷标题区域 -->
+            <div class="suggestion-header">
+                <div class="header-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3>网站建议系统</h3>
+                <p class="subtitle">ViGi Elite Team 期待您的宝贵意见</p>
+                <div class="decoration-line">
+                    <span class="line-dot"></span>
+                    <span class="line-dot"></span>
+                    <span class="line-dot"></span>
+                </div>
             </div>
             
-            <div class="suggestion-container">
-                <!-- 炫酷标题区域 -->
-                <div class="suggestion-header">
-                    <div class="header-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>网站建议系统</h3>
-                    <p class="subtitle">ViGi Elite Team 期待您的宝贵意见</p>
-                    <div class="decoration-line">
-                        <span class="line-dot"></span>
-                        <span class="line-dot"></span>
-                        <span class="line-dot"></span>
+            <!-- 表单区域 -->
+            <!-- 注意：这里添加了form标签 -->
+            <form id="suggestion-form" class="suggestion-form" action="https://formspree.io/f/mwpgnzqo" method="POST">
+                <!-- 添加隐藏的邮箱字段（Formspree必需） -->
+                <input type="hidden" name="_replyto" value="noreply@vget.com">
+                <input type="hidden" name="_subject" value="VGET网站建议">
+                
+                <!-- 建议类型选择 -->
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="fas fa-tag"></i>
+                        <span>建议类型</span>
+                        <span class="required-badge">必填</span>
+                    </label>
+                    <div class="category-selector">
+                        <div class="category-options">
+                            <button type="button" class="category-option" data-value="design" onclick="selectCategory(this)">
+                                <i class="fas fa-palette"></i>
+                                <span>任务记录新路线</span>
+                            </button>
+                            <button type="button" class="category-option" data-value="content" onclick="selectCategory(this)">
+                                <i class="fas fa-edit"></i>
+                                <span>任务记录新纪录</span>
+                            </button>
+                            <button type="button" class="category-option" data-value="feature" onclick="selectCategory(this)">
+                                <i class="fas fa-cogs"></i>
+                                <span>求差事或训练图</span>
+                            </button>
+                            <button type="button" class="category-option" data-value="bug" onclick="selectCategory(this)">
+                                <i class="fas fa-bug"></i>
+                                <span>添加差事或训练图</span>
+                            </button>
+                            <button type="button" class="category-option" data-value="video" onclick="selectCategory(this)">
+                                <i class="fas fa-video"></i>
+                                <span>精彩作品提交</span>
+                            </button>
+                            <button type="button" class="category-option" data-value="other" onclick="selectCategory(this)">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <span>其他建议</span>
+                            </button>
+                        </div>
+                        <!-- 这里改为input type="text"并隐藏 -->
+                        <input type="text" id="category" name="category" required style="display: none;">
                     </div>
                 </div>
                 
-                <!-- 表单区域 -->
-                <div class="suggestion-form">
-                    <!-- 建议类型选择 -->
-                    <div class="form-group">
-                        <label class="form-label">
-                            <i class="fas fa-tag"></i>
-                            <span>建议类型</span>
-                            <span class="required-badge">必填</span>
-                        </label>
-                        <div class="category-selector">
-                            <div class="category-options">
-                                <button type="button" class="category-option" data-value="design" onclick="selectCategory(this)">
-                                    <i class="fas fa-palette"></i>
-                                    <span>任务记录新路线</span>
-                                </button>
-                                <button type="button" class="category-option" data-value="content" onclick="selectCategory(this)">
-                                    <i class="fas fa-edit"></i>
-                                    <span>任务记录新纪录</span>
-                                </button>
-                                <button type="button" class="category-option" data-value="feature" onclick="selectCategory(this)">
-                                    <i class="fas fa-cogs"></i>
-                                    <span>求差事或训练图</span>
-                                </button>
-                                <button type="button" class="category-option" data-value="bug" onclick="selectCategory(this)">
-                                    <i class="fas fa-bug"></i>
-                                    <span>添加差事或训练图</span>
-                                </button>
-                                <button type="button" class="category-option" data-value="other" onclick="selectCategory(this)">
-                                    <i class="fas fas fa-video"></i>
-                                    <span>精彩作品提交</span>
-                                </button>
-                                <button type="button" class="category-option" data-value="other" onclick="selectCategory(this)">
-                                    <i class="fas fa-ellipsis-h"></i>
-                                    <span>其他建议</span>
-                                </button>
-                            </div>
-                            <input type="hidden" id="category" required>
-                        </div>
+                <!-- 建议内容 -->
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>建议内容</span>
+                        <span class="required-badge">必填</span>
+                    </label>
+                    <div class="textarea-container">
+                        <textarea 
+                            id="suggestion-text" 
+                            name="message"    
+                            placeholder="如果您有其他的差事，练习图需要可以在这里写建议，我看到的话会加到官网里，或者您有想要添加到官网里的差事也可以在这里写出来，我会添加到官网里（记得加上差事链接），署名我会加上你的ID。如果有新的任务记录或路线的话也可以写在这里"
+                            maxlength="500"
+                            required
+                        ></textarea>
+                        <div class="textarea-decoration"></div>
                     </div>
-                    
-                    <!-- 建议内容 -->
-                    <div class="form-group">
-                        <label class="form-label">
-                            <i class="fas fa-comment-alt"></i>
-                            <span>建议内容</span>
-                            <span class="required-badge">必填</span>
-                        </label>
-                        <div class="textarea-container">
-                            <textarea 
-                                id="suggestion-text" 
-                                placeholder="如果您有其他的差事，练习图需要可以在这里写建议，我看到的话会加到官网里，或者您有想要添加到官网里的差事也可以在这里写出来，我会添加到官网里（记得加上差事链接），署名我会加上你的ID。如果有新的任务记录或路线的话也可以写在这里"
-                                maxlength="500"
-                                required
-                            ></textarea>
-                            <div class="textarea-decoration"></div>
+                    <div class="form-footer">
+                        <div class="character-count" id="charCountContainer">
+                            <i class="fas fa-text-height"></i>
+                            <span id="charCount">0</span>/500
                         </div>
-                        <div class="form-footer">
-                            <div class="character-count" id="charCountContainer">
-                                <i class="fas fa-text-height"></i>
-                                <span id="charCount">0</span>/500
-                            </div>
-                            <div class="hint-text">
-                                <i class="fas fa-info-circle"></i>
-                                至少5个字符
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 称呼输入 -->
-                    <div class="form-group">
-                        <label class="form-label">
-                            <i class="fas fa-user"></i>
-                            <span>您的称呼</span>
-                            <span class="optional-badge">可选</span>
-                        </label>
-                        <div class="input-container">
-                            <input 
-                                type="text" 
-                                id="suggestion-name" 
-                                placeholder="如何称呼您？"
-                                maxlength="20"
-                            >
-                            <div class="input-decoration"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- 提交按钮 -->
-                    <div class="submit-container">
-                        <button class="submit-btn" onclick="submitSuggestion()" id="submitBtn">
-                            <i class="fas fa-paper-plane"></i>
-                            <span>提交建议</span>
-                            <div class="btn-glow"></div>
-                        </button>
-                        <div class="submit-hint">
-                            <i class="fas fa-keyboard"></i>
-                            快捷键：Ctrl + Enter
-                        </div>
-                    </div>
-                    
-                    <!-- 消息提示 -->
-                    <div class="message-container">
-                        <div class="success-message" id="successMessage">
-                            <div class="message-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="message-content">
-                                <h4>提交成功！</h4>
-                                <p>感谢您的建议，我们已经收到并会尽快处理</p>
-                            </div>
-                        </div>
-                        
-                        <div class="error-message" id="errorMessage">
-                            <div class="message-icon">
-                                <i class="fas fa-exclamation-circle"></i>
-                            </div>
-                            <div class="message-content">
-                                <h4>提交失败</h4>
-                                <p id="errorText">请检查表单内容后重试</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 底部信息 -->
-                    <div class="form-footer-info">
-                        <div class="info-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>您的信息将严格保密</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-heart"></i>
-                            <span>感谢您对VGET的支持</span>
+                        <div class="hint-text">
+                            <i class="fas fa-info-circle"></i>
+                            至少5个字符
                         </div>
                     </div>
                 </div>
-            </div>
+                
+                <!-- 称呼输入 -->
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="fas fa-user"></i>
+                        <span>您的称呼</span>
+                        <span class="optional-badge">可选</span>
+                    </label>
+                    <div class="input-container">
+                        <input 
+                            type="text" 
+                            id="suggestion-name" 
+                            name="name" 
+                            placeholder="如何称呼您？"
+                            maxlength="20"
+                        >
+                        <div class="input-decoration"></div>
+                    </div>
+                </div>
+                
+                <!-- 添加邮箱字段（可选，但建议添加） -->
+                <div class="form-group" style="display: none;">
+                    <label class="form-label">
+                        <i class="fas fa-envelope"></i>
+                        <span>邮箱</span>
+                    </label>
+                    <div class="input-container">
+                        <input 
+                            type="email" 
+                            name="email" 
+                            value="noreply@vget.com"
+                            style="display: none;">
+                  
+                    </div>
+                </div>
+                
+                <!-- 提交按钮 -->
+                <div class="submit-container">
+                    <!-- 改为submit类型的按钮 -->
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>提交建议</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <div class="submit-hint">
+                        <i class="fas fa-keyboard"></i>
+                        快捷键：Ctrl + Enter
+                    </div>
+                </div>
+                
+                <!-- 消息提示 -->
+                <div class="message-container">
+                    <div class="success-message" id="successMessage">
+                        <div class="message-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="message-content">
+                            <h4>提交成功！</h4>
+                            <p>感谢您的建议，我们已经收到并会尽快处理</p>
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="errorMessage">
+                        <div class="message-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="message-content">
+                            <h4>提交失败</h4>
+                            <p id="errorText">请检查表单内容后重试</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 底部信息 -->
+                <div class="form-footer-info">
+                    <div class="info-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>您的信息将严格保密</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-heart"></i>
+                        <span>感谢您对VGET的支持</span>
+                    </div>
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
     <!-- 练习差事 -->
  <section id="practices">
       <div class="container">
@@ -2512,80 +2538,83 @@
         }
         
         // 提交建议到Formspree
-        async function submitSuggestion() {
-            const category = document.getElementById('category').value;
-            const suggestion = document.getElementById('suggestion-text').value.trim();
-            const name = document.getElementById('suggestion-name').value.trim();
-            
-            // 验证
-            if (!category) {
-                showSuggestionError('请选择建议类型');
-                document.getElementById('category').focus();
-                return;
+        // 修改submitSuggestion函数
+async function submitSuggestion(e) {
+    if (e) e.preventDefault();
+    
+    const category = document.getElementById('category').value;
+    const suggestion = document.getElementById('suggestion-text').value.trim();
+    const name = document.getElementById('suggestion-name').value.trim();
+    
+    // 验证
+    if (!category) {
+        showSuggestionError('请选择建议类型');
+        document.getElementById('category').focus();
+        return false;
+    }
+    
+    if (!suggestion) {
+        showSuggestionError('请填写建议内容');
+        document.getElementById('suggestion-text').focus();
+        return false;
+    }
+    
+    if (suggestion.length < 5) {
+        showSuggestionError('建议内容太短，请详细描述（至少5个字符）');
+        document.getElementById('suggestion-text').focus();
+        return false;
+    }
+    
+    // 禁用按钮，防止重复提交
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>正在提交...</span>';
+    
+    // 清除错误信息
+    hideSuggestionError();
+    
+    try {
+        // 直接提交表单
+        const form = document.getElementById('suggestion-form');
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
             }
-            
-            if (!suggestion) {
-                showSuggestionError('请填写建议内容');
-                document.getElementById('suggestion-text').focus();
-                return;
-            }
-            
-            if (suggestion.length < 5) {
-                showSuggestionError('建议内容太短，请详细描述（至少5个字符）');
-                document.getElementById('suggestion-text').focus();
-                return;
-            }
-            
-            // 禁用按钮，防止重复提交
-            const btn = document.getElementById('submitBtn');
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>正在提交...</span>';
-            
-            // 清除错误信息
-            hideSuggestionError();
-            
-            try {
-                // 准备表单数据
-                const formData = new FormData();
-                formData.append('category', getCategoryText(category));
-                formData.append('suggestion', suggestion);
-                if (name) formData.append('name', name);
-                formData.append('_subject', `[VGET网站建议] ${getCategoryText(category)}`);
-                formData.append('_replyto', name ? `${name} <noreply@vget.com>` : '匿名用户 <noreply@vget.com>');
-                
-                // 添加时间戳和额外信息
-                formData.append('timestamp', new Date().toLocaleString('zh-CN'));
-                formData.append('page', window.location.href);
-                
-                // 发送到Formspree
-                const response = await fetch(FORMSPREE_ENDPOINT, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // 提交成功
-                    showSuggestionSuccess();
-                    resetSuggestionForm();
-                } else {
-                    const errorData = await response.json();
-                    showSuggestionError('提交失败：' + (errorData.error || '请稍后重试'));
-                }
-            } catch (error) {
-                console.error('提交错误:', error);
-                showSuggestionError('网络错误，请检查网络连接后重试');
-            } finally {
-                // 3秒后恢复按钮
-                setTimeout(() => {
-                    btn.disabled = false;
-                    btn.innerHTML = '<i class="fas fa-paper-plane"></i><span>提交建议</span>';
-                }, 3000);
-            }
-        }
+        });
         
+        if (response.ok) {
+            // 提交成功
+            showSuggestionSuccess();
+            resetSuggestionForm();
+        } else {
+            showSuggestionError('提交失败，请稍后重试');
+        }
+    } catch (error) {
+        console.error('提交错误:', error);
+        showSuggestionError('网络错误，请检查网络连接后重试');
+    } finally {
+        // 3秒后恢复按钮
+        setTimeout(() => {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i><span>提交建议</span>';
+        }, 3000);
+    }
+    
+    return false;
+}
+
+// 修改事件监听
+document.addEventListener('DOMContentLoaded', function() {
+    // 添加表单提交事件
+    const form = document.getElementById('suggestion-form');
+    if (form) {
+        form.addEventListener('submit', submitSuggestion);
+    }
+    
+    // 其他代码保持不变...
+});
         // 显示成功消息
         function showSuggestionSuccess() {
             const successMsg = document.getElementById('successMessage');
@@ -2623,22 +2652,33 @@
         }
         
         // 重置表单
-        function resetSuggestionForm() {
-            const category = document.getElementById('category');
-            const suggestionText = document.getElementById('suggestion-text');
-            const name = document.getElementById('suggestion-name');
-            
-            if (category) category.value = '';
-            if (suggestionText) suggestionText.value = '';
-            if (name) name.value = '';
-            
-            // 清除选择的分类按钮
-            document.querySelectorAll('.category-option').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            updateCharCount();
-        }
+function resetSuggestionForm() {
+    // 清除输入字段
+    const category = document.getElementById('category');
+    const suggestionText = document.getElementById('suggestion-text');
+    const name = document.getElementById('suggestion-name');
+    
+    if (category) category.value = '';
+    if (suggestionText) suggestionText.value = '';
+    if (name) name.value = '';
+    
+    // 清除选择的分类按钮
+    document.querySelectorAll('.category-option').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // 清除本地存储
+    const formFields = ['category', 'suggestion-text', 'suggestion-name'];
+    formFields.forEach(fieldId => {
+        localStorage.removeItem(`suggestion_${fieldId}`);
+    });
+    
+    // 清除sessionStorage标记（可选）
+    sessionStorage.removeItem('formSubmitted');
+    
+    // 重置字符计数
+    updateCharCount();
+}
         
         // 初始化建议系统
         document.addEventListener('DOMContentLoaded', function() {
