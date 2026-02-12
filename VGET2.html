@@ -267,6 +267,442 @@
             flex-direction: column;
             gap: 50px;
         }
+         /* ----- 四杠领导组 · 全新卡片UI ----- */
+    .four-star-container {
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+    .rank-card.four-star.leader-card {
+        background: linear-gradient(145deg, #1E1A1A, #141010);
+        border-top: none;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 51, 51, 0.3);
+        box-shadow: 0 10px 25px rgba(255, 51, 51, 0.15);
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px 30px 35px;
+    }
+    
+    /* 顶部流光特效 —— 四杠红金色 */
+    .leader-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(90deg, #ff3333, #ffcc00, #ff3333, #ffcc00);
+        background-size: 300% 100%;
+        animation: leaderGlow 6s linear infinite;
+        opacity: 0.9;
+    }
+    
+    @keyframes leaderGlow {
+        0% { background-position: 0% 0; }
+        100% { background-position: 300% 0; }
+    }
+    
+    /* 皇冠大图标 + 核心层标签 */
+    .leader-icon {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .leader-icon i {
+        font-size: 48px;
+        color: #ffcc00;
+        text-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+    }
+    
+    .leader-badge {
+        background: linear-gradient(135deg, #ff3333, #cc0000);
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 4px 16px;
+        border-radius: 30px;
+        letter-spacing: 2px;
+        margin-top: 6px;
+        border: 1px solid rgba(255, 204, 0, 0.5);
+        box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+        text-transform: uppercase;
+    }
+    
+    .leader-desc {
+        color: #ffaaaa !important;
+        font-size: 16px !important;
+        margin-bottom: 25px !important;
+        font-weight: 300;
+        letter-spacing: 2px;
+        border-bottom: 1px dashed rgba(255, 204, 0, 0.3);
+        padding-bottom: 15px;
+    }
+    
+    /* 领导成员网格 —— 2x3 响应式 */
+    .leader-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px 20px;
+        margin: 20px 0 30px;
+    }
+    
+    /* 每个成员卡片 */
+    .leader-item {
+        background: rgba(10, 10, 10, 0.7);
+        backdrop-filter: blur(4px);
+        border-radius: 16px;
+        padding: 20px 18px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        border: 1px solid rgba(255, 204, 0, 0.15);
+        transition: all 0.25s ease;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .leader-item:hover {
+        border-color: #ffcc00;
+        background: rgba(30, 20, 20, 0.8);
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(255, 51, 51, 0.2);
+    }
+    
+    /* 头像圆形区域 */
+    .leader-avatar {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #ffcc00;
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+    }
+    
+    .leader-avatar i {
+        font-size: 30px;
+        color: #ffcc00;
+        filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+    }
+    
+    /* 成员信息区域 */
+    .leader-info {
+        flex: 1;
+        text-align: left;
+    }
+    
+    .leader-name {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+    
+    .leader-name span {
+        font-size: 18px;
+        font-weight: 700;
+        color: #ffcc00;
+        letter-spacing: 0.5px;
+        word-break: break-word;
+    }
+    
+    .leader-bio {
+        font-size: 13px;
+        line-height: 1.5;
+        color: #dddddd;
+        margin: 0;
+        background: rgba(255, 51, 51, 0.05);
+        padding: 8px 10px;
+        border-radius: 8px;
+        border-left: 3px solid #ffcc00;
+        font-style: italic;
+    }
+    
+    /* 集体宣言 */
+    .leader-manifesto {
+        margin-top: 25px;
+        padding: 20px 25px;
+        background: rgba(255, 51, 51, 0.08);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 204, 0, 0.2);
+        position: relative;
+        text-align: center;
+    }
+    
+    .leader-manifesto i {
+        color: #ffcc00;
+        font-size: 24px;
+        opacity: 0.5;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    
+    .leader-manifesto p {
+        display: inline;
+        font-size: 16px;
+        color: #fff0d0;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    
+    .manifesto-sign {
+        display: block;
+        margin-top: 10px;
+        color: #ffcc00;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: right;
+        font-style: normal;
+    }
+    
+    /* 响应式: 平板 2列，手机 1列 */
+    @media (max-width: 900px) {
+        .leader-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .leader-grid {
+            grid-template-columns: 1fr;
+        }
+        .leader-item {
+            padding: 16px;
+        }
+        .rank-card.four-star.leader-card {
+            padding: 20px 15px;
+        }
+        .leader-name span {
+            font-size: 16px;
+        }
+    }
+    
+    /* 兼容原四杠卡片特殊样式，提高优先级 */
+    .rank-card.four-star .member-tag {
+        display: none; /* 隐藏旧式的tag，我们已用新UI */
+    }
+    .leader-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;  /* 保证图片不拉伸，裁剪填充 */
+    border: 2px solid #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+}
+/* ===== 吉祥物军团 · 横向小卡片 ===== */
+.mascot-squad-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+}
+
+.mascot-squad-header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(0, 255, 255, 0.3);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mascot-squad-header h3 {
+    font-size: 22px;
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mascot-squad-header h3 i {
+    color: #ffcc00;
+}
+
+.mascot-squad-badge {
+    background: rgba(255, 204, 0, 0.2);
+    border: 1px solid #ffcc00;
+    color: #ffcc00;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.mascot-squad-sub {
+    color: #88bbbb;
+    font-size: 14px;
+}
+
+/* 网格布局：一行6个，响应式减少 */
+.mascot-squad-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+}
+
+/* 单个吉祥物小卡片 */
+.mascot-squad-item {
+    background: rgba(10, 30, 30, 0.7);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 15px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s;
+    position: relative;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mascot-squad-item:hover {
+    border-color: #00ffff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+    background: rgba(0, 50, 50, 0.8);
+}
+
+/* 小头像 */
+.mascot-squad-avatar {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(145deg, #1a3a3a, #0a1f1f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.mascot-squad-avatar i {
+    font-size: 36px;
+    color: #00ffff;
+    filter: drop-shadow(0 0 5px cyan);
+}
+
+.mascot-squad-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* 名字区域 */
+.mascot-squad-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mascot-squad-title {
+    background: rgba(0, 255, 255, 0.15);
+    color: #aaffff;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    display: inline-block;
+    align-self: center;
+}
+
+/* 简介 */
+.mascot-squad-bio {
+    font-size: 12px;
+    color: #cccccc;
+    margin: 8px 0 12px;
+    font-style: italic;
+    line-height: 1.4;
+    min-height: 32px;
+}
+
+/* 摸摸按钮 */
+.mascot-squad-pat {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: auto;
+}
+
+.mascot-squad-pat:hover {
+    background: #00ffff;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px cyan;
+}
+
+/* 底部统计 */
+.mascot-squad-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.mascot-squad-tip {
+    color: #88bbbb;
+    font-size: 13px;
+}
+
+.mascot-squad-tip i {
+    color: #ff99aa;
+}
+
+#mascotPatCount {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* 响应式：平板4个，手机2个 */
+@media (max-width: 1000px) {
+    .mascot-squad-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .mascot-squad-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .mascot-squad-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .mascot-squad-grid {
+        grid-template-columns: 1fr;
+    }
+}
         
         .three-ranks {
             display: flex;
@@ -1551,6 +1987,7 @@
     <section class="hero">
         <div class="container">
             <h2>ViGi Elite Team</h2>
+            <h2>扫码YuK,司马的神权犬</h2>
             <div class="subtitle">VGET</div>
             <p>成立于2025年，为所有热爱义警的玩家提供专业平台</p>
             <a href="#contact" class="btn">立即加入</a>
@@ -1700,28 +2137,220 @@
                 
                 <!-- 四杠成员单独一行 -->
                 <div class="four-star-container">
-                    <div class="rank-card four-star">
-                        <div class="rank-icon">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3>四杠成员</h3>
-                        <p>义警魔怔人，核心领导层，负责帮会考核以及管理。</p>
-                        <div class="members-list">
-                            <h4>当前成员</h4>
-                            <div class="members-container">
-                                <span class="member-tag">__O.o__</span>
-                                <span class="member-tag">chenyy236</span>
-                                <span class="member-tag">IsGodOnlyKnows</span>
-                                <span class="member-tag">__tianshiyan__</span>
-                                <span class="member-tag">__muxi0115__</span>
-                                <span class="member-tag">___1der___</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="rank-card four-star leader-card">
+             <!-- 顶部分割色带 - 强化领导组专属感 -->
+             <div class="leader-glow"></div>
+        
+                  <div class="rank-icon leader-icon">
+               <i class="fas fa-crown"></i>
+            <span class="leader-badge">核心层</span>
+              </div>
+        
+                  <h3>四杠成员 · 义警魔怔人</h3>
+                  <p class="leader-desc">帮会考核官 · 管理组</p>
+        
+             <!-- 领导成员群像 - 网格布局，每个成员独立头像+自我介绍 -->
+             <div class="leader-grid">
+            <!-- __O.o__ -->
+            <div class="leader-item">
+                <div class="leader-avatar">
+                    <img src="JM.jpg" alt="__O.o__" class="leader-img">
+                    <!-- 可以用真实头像占位，如需图片替换fa类即可 -->
                 </div>
+                <div class="leader-info">
+                    <div class="leader-name">
+                        <span>__O.o__</span>
+                        <i class="fas fa-shield-alt" style="color:#ffcc00; font-size: 14px;"></i>
+                    </div>
+                    <p class="leader-bio">
+                        🛡️ 我纯废物
+                    </p>
+                </div>
+            </div>
+            
+            <!-- chenyy236 -->
+            <div class="leader-item">
+                <div class="leader-avatar">
+                    <img src="236.jpg" alt="__O.o__" class="leader-img">
+                </div>
+                <div class="leader-info">
+                    <div class="leader-name">
+                        <span>chenyy236</span>
+                        <i class="fas fa-bolt" style="color:#ffcc00; font-size: 14px;"></i>
+                    </div>
+                    <p class="leader-bio">
+                        ⚡YuK爹
+                    </p>
+                </div>
+            </div>
+            
+            <!-- IsGodOnlyKnows -->
+            <div class="leader-item">
+                <div class="leader-avatar">
+                    <img src="God.jpg" alt="__O.o__" class="leader-img">
+                </div>
+                <div class="leader-info">
+                    <div class="leader-name">
+                        <span>IsGodOnlyKnows</span>
+                        <i class="fas fa-feather" style="color:#ffcc00; font-size: 14px;"></i>
+                    </div>
+                    <p class="leader-bio">
+                        🐉
+                    </p>
+                </div>
+            </div>
+            
+            <!-- __tianshiyan__ -->
+            <div class="leader-item">
+                <div class="leader-avatar">
+                    <img src="tianshiyan.jpg" alt="__O.o__" class="leader-img">
+                </div>
+                <div class="leader-info">
+                    <div class="leader-name">
+                        <span>__tianshiyan__</span>
+                        <i class="fas fa-snowflake" style="color:#ffcc00; font-size: 14px;"></i>
+                    </div>
+                    <p class="leader-bio">
+                        👻
+                    </p>
+                </div>
+            </div>
+            
+            <!-- __muxi0115__ 木樨 -->
+            <div class="leader-item">
+                <div class="leader-avatar">
+                    <img src="muxi.jpg" alt="__O.o__" class="leader-img">
+                </div>
+                <div class="leader-info">
+                    <div class="leader-name">
+                        <span>__muxi0115__</span>
+                        <i class="fas fa-tree" style="color:#ffcc00; font-size: 14px;"></i>
+                    </div>
+                    <p class="leader-bio">
+                        🌿enenhahu最严厉的父亲
+                    </p>
+                </div>
+            </div>
+            
+            <!-- ___1der___ -->
+            <div class="leader-item">
+                <div class="leader-avatar">
+                    <img src="der.png" alt="__O.o__" class="leader-img">
+                </div>
+                <div class="leader-info">
+                    <div class="leader-name">
+                        <span>___1der___</span>
+                        <i class="fas fa-star" style="color:#ffcc00; font-size: 14px;"></i>
+                    </div>
+                    <p class="leader-bio">
+                        👑
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- 管理组宣言/集体签名 -->
+        <div class="leader-manifesto">
+            <i class="fas fa-quote-left"></i>
+            <p>我们不是天才，只是一天飞25个小时的魔怔人。<br>期待你成为下一个四杠。</p>
+            <span class="manifesto-sign">—— VGET 核心管理组</span>
+        </div>
+    </div>
+    
+    
+</div>
+<!-- ===== 吉祥物军团 · 四杠正下方 ===== -->
+<div class="mascot-squad-container">
+    <div class="mascot-squad-header">
+        <h3><i class="fas fa-paw"></i> 帮会吉祥物军团 <span class="mascot-squad-badge">VGET·团宠部</span></h3>
+    </div>
+    
+    <div class="mascot-squad-grid">
+        <!-- 吉祥物 1：苍蓝星 · 小V -->
+        <div class="mascot-squad-item">
+            <div class="mascot-squad-avatar">
+                <!-- 图标占位（推荐测试用） -->
+               <!-- <i class="fas fa-dragon"></i>-->
+                <!-- 真实图片（换成你自己的） -->
+                 <img src="AdGai.jpg" alt="adgai" class="mascot-squad-img">
+            </div>
+           <div class="mascot-squad-info">
+                <div class="mascot-squad-name">
+                _____Ad_Gai_____
+                    <span class="mascot-squad-title">美女</span>
+                </div>
+                <p class="mascot-squad-bio">幽默搞笑女玩家<br>最菜的义警技术</p>
+            </div>
+            <button class="mascot-squad-pat" onclick="petSquadMascot(this, '小V')">
+                <i class="fas fa-hand-peace"></i> 摸
+            </button>
+        </div>
+        
+        <!-- 吉祥物 2：胖橘 · 大福 -->
+        <div class="mascot-squad-item">
+            <div class="mascot-squad-avatar">
+                <!--<i class="fas fa-cat"></i> -->
+                 <img src="doge.jpg" alt="doge" class="mascot-squad-img">
+            </div>
+            <div class="mascot-squad-info">
+                <div class="mascot-squad-name">
+                    狗子
+                    <span class="mascot-squad-title">没积极之人</span>
+                </div>
+                <p class="mascot-squad-bio">死了吗的,天天发几把线条小狗,玩全福车飞了人还在</p>
+            </div>
+            <button class="mascot-squad-pat" onclick="petSquadMascot(this, '大福')">
+                <i class="fas fa-hand-peace"></i> 摸
+            </button>
+        </div>
+        
+        <!-- 吉祥物 3：机械狗 · 铁头 -->
+        <div class="mascot-squad-item">
+            <div class="mascot-squad-avatar">
+                <img src="doge.jpg" alt="doge" class="mascot-squad-img">
+                <!-- <img src="images/mascot3.png" alt="铁头"> -->
+            </div>
+            <div class="mascot-squad-info">
+                <div class="mascot-squad-name">
+                    待定
+                    <span class="mascot-squad-title">二逼</span>
+                </div>
+                <p class="mascot-squad-bio">待定</p>
+            </div>
+            <button class="mascot-squad-pat" onclick="petSquadMascot(this, '铁头')">
+                <i class="fas fa-hand-peace"></i> 摸
+            </button>
+        </div>
+        
+        <!-- 吉祥物 4：小幽灵 · 飘飘 -->
+        <div class="mascot-squad-item">
+            <div class="mascot-squad-avatar">
+                <img src="doge.jpg" alt="doge" class="mascot-squad-img">
+                <!-- <img src="images/mascot4.png" alt="飘飘"> -->
+            </div>
+            <div class="mascot-squad-info">
+                <div class="mascot-squad-name">
+                    待定
+                    <span class="mascot-squad-title">二逼</span>
+                </div>
+                <p class="mascot-squad-bio">待定</p>
+            </div>
+            <button class="mascot-squad-pat" onclick="petSquadMascot(this, '飘飘')">
+                <i class="fas fa-hand-peace"></i> 摸
+            </button>
+        </div>
+        
+       
+    </div>
+    
+    <!-- 底部小彩蛋（可删） -->
+    <div class="mascot-squad-footer">
+        <span class="mascot-squad-tip">
+            <i class="fas fa-heart"></i> 点击「摸」给吉祥物加油 · 今日摸头数 <span id="mascotPatCount">27</span>
+        </span>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -3322,6 +3951,48 @@ function resetSuggestionForm() {
             });
         });
     });
+    // ===== 吉祥物军团摸摸头 =====
+window.petSquadMascot = function(btn, name) {
+    // 按钮反馈
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-heart"></i> 嗷～';
+    btn.style.background = '#ff66aa';
+    btn.style.borderColor = '#ffcc00';
+    btn.style.color = '#0a0a0a';
+    
+    // 头像弹跳
+    const avatar = btn.closest('.mascot-squad-item').querySelector('.mascot-squad-avatar i, .mascot-squad-img');
+    if (avatar) {
+        avatar.style.transform = 'scale(1.2)';
+        avatar.style.transition = 'transform 0.15s';
+        setTimeout(() => {
+            avatar.style.transform = 'scale(1)';
+        }, 150);
+    }
+    
+    // 摸头计数
+    const countEl = document.getElementById('mascotPatCount');
+    if (countEl) {
+        let count = parseInt(countEl.innerText) || 27;
+        countEl.innerText = count + 1;
+    }
+    
+    // 2秒后恢复
+    setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = 'rgba(0, 255, 255, 0.1)';
+        btn.style.borderColor = '#00ffff';
+        btn.style.color = '#00ffff';
+    }, 1500);
+};
+
+// 初始化摸头计数（随机）
+document.addEventListener('DOMContentLoaded', function() {
+    const countEl = document.getElementById('mascotPatCount');
+    if (countEl) {
+        countEl.innerText = Math.floor(Math.random() * 30 + 15);
+    }
+});
     </script>
 </body>
 </html>
