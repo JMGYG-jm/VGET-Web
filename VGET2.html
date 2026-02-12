@@ -406,6 +406,115 @@
             background-color: #222;
         }
                 /* 义警大佬视频展示 */
+         /* 视频折叠分组容器 */
+    .video-collapse-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 15px;
+    }
+    .video-player-group {
+        background: rgba(20,20,20,0.7);
+        border-radius: 14px;
+        border: 1px solid rgba(255,204,0,0.25);
+        overflow: hidden;
+        backdrop-filter: blur(4px);
+        transition: all 0.2s;
+    }
+    .video-player-group:hover {
+        border-color: rgba(255,204,0,0.6);
+        box-shadow: 0 0 15px rgba(255,204,0,0.15);
+    }
+
+    /* 可点击的头部 */
+    .player-group-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 24px;
+        background: linear-gradient(145deg, #1f1f1f, #161616);
+        cursor: pointer;
+        transition: background 0.2s;
+        user-select: none;
+    }
+    .player-group-header:hover {
+        background: #252525;
+    }
+    .player-group-title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .player-name {
+        font-size: 22px;
+        font-weight: 700;
+        color: #ffcc00;
+        text-shadow: 0 0 8px rgba(255,204,0,0.3);
+        letter-spacing: 1px;
+    }
+    .video-count {
+        background: rgba(255,204,0,0.15);
+        padding: 4px 14px;
+        border-radius: 30px;
+        font-size: 14px;
+        color: #ffcc00;
+        border: 1px solid rgba(255,204,0,0.3);
+        font-weight: 500;
+    }
+    .toggle-icon {
+        color: #ffcc00;
+        font-size: 20px;
+        transition: transform 0.35s ease;
+    }
+    /* 旋转图标（展开时） */
+    .player-group-header.active .toggle-icon i {
+        transform: rotate(180deg);
+    }
+
+    /* 内容区域 — 默认完全隐藏 */
+    .player-group-content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, padding 0.3s;
+        background: rgba(10,10,10,0.6);
+        border-top: 0 solid transparent;
+    }
+    /* 展开状态 */
+    .player-group-content.expanded {
+        max-height: 2000px;    /* 足够容纳所有视频行 */
+        opacity: 1;
+        padding: 20px 20px 25px;
+        border-top-width: 1px;
+        border-top-color: rgba(255,204,0,0.2);
+    }
+
+    /* 内部表格样式微调，完全沿用原video-table，更紧凑 */
+    .player-group-content .video-table-container {
+        margin-top: 0;
+    }
+    .player-group-content .video-table {
+        background: rgba(0,0,0,0.3);
+        border-radius: 12px;
+    }
+    .player-group-content .video-table th {
+        background: #b38f00;
+        padding: 12px 15px;
+    }
+    .player-group-content .video-table td {
+        padding: 12px 15px;
+    }
+    .player-group-content .video-link {
+        padding: 6px 16px;
+        font-size: 13px;
+    }
+    /* 手机优化 */
+    @media (max-width: 600px) {
+        .player-group-header { padding: 15px 18px; }
+        .player-name { font-size: 18px; }
+        .video-count { font-size: 12px; padding: 2px 10px; }
+    }        
         #video-showcase {
             position: relative;
             overflow: hidden;
@@ -1707,696 +1816,209 @@
     </section>
             
     <!-- 义警大佬视频展示 -->
-    <section id="video-showcase">
-        <div class="container">
-            <div class="section-title">
-                <h2><i class="fas fa-video"></i> 义警大佬视频展示</h2>
-                <p class="section-subtitle">欣赏顶尖玩家的义警精彩瞬间</p>
+   <section id="video-showcase">
+    <div class="container">
+        <div class="section-title">
+            <h2><i class="fas fa-video"></i> 义警大佬视频展示</h2>
+            <p class="section-subtitle">点击大佬ID — 展开/收起他的精彩操作</p>
+        </div>
+
+        <div class="showcase-container">
+            <div class="showcase-header">
+                <div class="showcase-header-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3>大佬精彩视频作品</h3>
+                <p class="subtitle">享受丝滑的操作 · 按玩家分类</p>
+                <p style="font-size: 14px; color: #ffcc00; margin-top: 8px;">
+                    <i class="fas fa-hand-pointer"></i> 点击卡片标题展开/收起该大佬视频
+                </p>
             </div>
-            
-            <div class="showcase-container">
-                <div class="showcase-header">
-                    <div class="showcase-header-icon">
-                        <i class="fas fa-crown"></i>
+
+            <!-- 折叠分类容器 -->
+            <div class="video-collapse-container">
+                <!-- ---------- 玩家：____Mgonal____ ---------- -->
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-user-ninja"></i>
+                            <span class="player-name">____Mgonal____</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
                     </div>
-                    <h3>大佬精彩视频作品</h3>
-                    <p class="subtitle">享受丝滑的操作</p>
+                    <div class="player-group-content">
+                        <div class="video-table-container">
+                            <table class="video-table">
+                                <thead><tr><th>视频标题</th><th>大佬ID</th><th>链接</th></tr></thead>
+                                <tbody>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>佩罗义警27连喷飞锯木厂，丝滑！</span></td><td><span class="player-id">____Mgonal____</span></td><td><a href="https://www.bilibili.com/video/BV1vWHKz2E5b/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>观感较好的人道义警批发飞房盛宴</span></td><td><span class="player-id">____Mgonal____</span></td><td><a href="https://www.bilibili.com/video/BV1dNyhBxE15/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>当当钟终章犯罪现场义警飞山</span></td><td><span class="player-id">____Mgonal____</span></td><td><a href="https://www.bilibili.com/video/BV15SWyzcEfU/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>MMMMMMMMMMMMMMgonal的一蹭无悬停上花园银行</span></td><td><span class="player-id">____Mgonal____</span></td><td><a href="https://www.bilibili.com/video/BV1AsUhB7E6p/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>练习义警的第一天说是</span></td><td><span class="player-id">____Mgonal____</span></td><td><a href="https://www.bilibili.com/video/BV1LEm2BCEfx/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>飞房看到爽（并非误入）</span></td><td><span class="player-id">MMMMMMMgonal</span></td><td><a href="https://www.bilibili.com/video/BV1fqBvBtETY/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警全程飞山40连喷</span></td><td><span class="player-id">MMMMMMgonal</span></td><td><a href="https://www.bilibili.com/video/BV1odqABwE2w/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>第一人称义警飞花园银行</span></td><td><span class="player-id">MMMMMMgonal</span></td><td><a href="https://www.bilibili.com/video/BV1Yui1B6EbZ/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警U型全程飞山57喷6分26秒到货轮</span></td><td><span class="player-id">MMMMMMgonal</span></td><td><a href="https://www.bilibili.com/video/BV1mLrMBzExL/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>世界级义警信号全程258.18</span></td><td><span class="player-id">MMMMMMgonal</span></td><td><a href="https://www.bilibili.com/video/BV1fZzJBQE3E/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>诚邀全网义警玩家观看新年晚会飞房</span></td><td><span class="player-id">MMMMMMMMMgonal</span></td><td><a href="https://www.bilibili.com/video/BV1decNztEGE/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>训练图无剪辑义警14连飞房</span></td><td><span class="player-id">MMMMMMMMMgonal</span></td><td><a href="https://www.bilibili.com/video/BV1X8cczyEzJ/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>不到啊就这样钻进去了</span></td><td><span class="player-id">___________________M</span></td><td><a href="https://www.bilibili.com/video/BV1pxmmBoEUB/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="video-table-container">
-                    <table class="video-table">
-                        <thead>
-                            <tr>
-                                <th><i class="fas fa-heading"></i> 视频标题</th>
-                                <th><i class="fas fa-user-ninja"></i> 大佬ID</th>
-                                <th><i class="fas fa-external-link-alt"></i> 视频链接</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        超强一称盲视野上银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">__1der__</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1h4y5BTEoa/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        极限操作，无悬停精准落花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">Enderman_精灵</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV14ea3zrE9a/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        这不是倒放？无悬停磕上花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">Enderman_精灵</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1VLEwzdEqr/?spm_id_from=333.1387.upload.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                              <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        佩罗义警27连喷飞锯木厂，丝滑！
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">____Mgonal____</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1vWHKz2E5b/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                              <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        观感较好的人道义警批发飞房盛宴
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">____Mgonal____</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1dNyhBxE15/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                              <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        当当钟终章犯罪现场义警飞山
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">____Mgonal____</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV15SWyzcEfU/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        观感较好的人道义警批发飞房盛宴
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">____Mgonal____</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1dNyhBxE15/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        1der一蹭无悬停上花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">__1der__</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1SDCTBCE4u/?spm_id_from=333.1387.upload.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        MMMMMMMMMMMMMMgonal的一蹭无悬停上花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">____Mgonal____</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1AsUhB7E6p/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                             <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        不到啊就这样钻进去了
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___________________M</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1pxmmBoEUB/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警七叶树飞豪宅
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">__1der__</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1ntm3BSEDa?spm_id_from=333.788.recommend_more_video.-1&trackid=web_related_0.router-related-2206146-8k2m6.1765541550526.431&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警七叶树飞豪宅2
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">__1der__</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1XzmEBsENU?spm_id_from=333.788.recommend_more_video.-1&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                             <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        练习义警的第一天说是
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">____Mgonal____</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1LEm2BCEfx/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警第一人称飞花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">__1der__</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1QhqjBdEWB/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        人道义警102.263
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">KO.....</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1XNqsB2EFq/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        一称人道右出加一称三蹭花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">__1der__</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1R3qkBvEkw/?spm_id_from=333.1387.upload.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        第一人称人道叛乱分子义警七叶树飞采石场
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">__1der__</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1JJqDBAEJy/?spm_id_from=333.1387.upload.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        飞房看到爽（并非误入）
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">MMMMMMMgonal</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1fqBvBtETY/?spm_id_from=333.1387.upload.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        腐肉为引，香水为信
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">木樨木兮</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV12RUKBSE3N/?share_source=copy_web&vd_source=48fb93671c9c3521325a72152b5ad603" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        新时代QQ飞车
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">muxi</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1aP4iz6EBu/?share_source=copy_web&vd_source=48fb93671c9c3521325a72152b5ad603" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                             <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警全程飞山40连喷
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">MMMMMMgonal</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1odqABwE2w/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        第一人称义警飞花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">MMMMMMgonal</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1Yui1B6EbZ/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                             <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警U型全程飞山57喷6分26秒到货轮
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">MMMMMMgonal</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1mLrMBzExL/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        世界级义警信号全程258.18
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">MMMMMMgonal</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1fZzJBQE3E/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        《我的义警会后空翻~》
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">_____Ad_Gai_____</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1PG6TBfEnB/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        好险！差点让共荣保险好起来了
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">_____Ad_Gai_____</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV13KzzBFE9A/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                             <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        诚邀全网义警玩家观看新年晚会节目飞房
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">MMMMMMMMMgonal</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1decNztEGE/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                             <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        训练图无剪辑义警14连飞房
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">MMMMMMMMMgonal</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1X8cczyEzJ/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警一人称蹭礁石加信号返程
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1UcidBdEKy/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=a1fa4e8c-5784-4115-a705-562e7adf972b&share_source=COPY&share_tag=s_i&timestamp=1770727764&unique_k=eVTP5dS&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警一人称游艇返程飞花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>___1der___
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1CvrcBkEws/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=d3fc8f66-d820-428b-ba0a-3022bfdefbbf&share_source=COPY&share_tag=s_i&timestamp=1770727743&unique_k=noM91XM&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警一人称信号
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1CGidBEENQ/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=5236a5c4-cd86-45db-baa4-d201867b2d0c&share_source=COPY&share_tag=s_i&timestamp=1770727715&unique_k=u3rxZ2u&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警一人称飞房
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV135iRBFE6g/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=dc76157a-ec3f-45f1-96cb-f97f6994abd1&share_source=COPY&share_tag=s_i&timestamp=1770727691&unique_k=EZWhJuO&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        花园银行180蹭
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1Z5veBCEGT/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=7b31cc00-2102-4ebe-a19f-9a0cb3e04df6&share_source=COPY&share_tag=s_i&timestamp=1770727664&unique_k=OWGEDVN&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警一人称建筑工地飞骷髅马
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1rBrcB6EPf/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=003ad906-1fe3-4270-9974-7501be6f7a08&share_source=COPY&share_tag=s_i&timestamp=1770727620&unique_k=AsDx1Z0&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警一人称一蹭飞花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1nJzHB4EMJ/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=5ff9333c-68eb-499d-9d9f-f2e2756dcbbb&share_source=COPY&share_tag=s_i&timestamp=1770727594&unique_k=EOSiF3a&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        义警一人称20连飞花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1eQznB1EJR/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=0cf24259-e2da-43ee-b2aa-587cfde9e6ed&share_source=COPY&share_tag=s_i&timestamp=1770727573&unique_k=VFY3w9j&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        电竞级帧数8帧飞花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1pccPzAEwP/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=173de581-4d7f-49e9-8cde-6ac32853706d&share_source=COPY&share_tag=s_i&timestamp=1770727524&unique_k=uLE11nZ&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="video-title">
-                                        <i class="fas fa-play-circle"></i>
-                                        电竞级帧数8帧一人称飞花园银行
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="player-id">___1der___</span>
-                                </td>
-                                <td>
-                                    <a href="https://www.bilibili.com/video/BV1gwcAzkEtX/?buvid=XU4CD624DE4AF5BC6CFA379C5CFD1E52621F8&is_story_h5=false&mid=1bj28XvX04IlSBBEj5BuMw%3D%3D&plat_id=147&share_from=ugc&share_medium=android&share_plat=android&share_session_id=9054903a-fccc-472e-ae5f-96e423590ec3&share_source=COPY&share_tag=s_i&timestamp=1770727487&unique_k=noosBFB&up_id=1638613680&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        观看视频
-                                    </a>
-                                </td>
-                            </tr>
-                            
-                            
-                        </tbody>
-                    </table>
+
+                <!-- ---------- 玩家：__1der__ / ___1der___ ---------- (合并为1der系列) -->
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-user-ninja"></i>
+                            <span class="player-name">__1der__ 系列</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="video-table-container">
+                            <table class="video-table">
+                                <thead><tr><th>视频标题</th><th>大佬ID</th><th>链接</th></tr></thead>
+                                <tbody>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>超强一称盲视野上银行</span></td><td><span class="player-id">__1der__</span></td><td><a href="https://www.bilibili.com/video/BV1h4y5BTEoa/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>1der一蹭无悬停上花园银行</span></td><td><span class="player-id">__1der__</span></td><td><a href="https://www.bilibili.com/video/BV1SDCTBCE4u/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警七叶树飞豪宅</span></td><td><span class="player-id">__1der__</span></td><td><a href="https://www.bilibili.com/video/BV1ntm3BSEDa?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警七叶树飞豪宅2</span></td><td><span class="player-id">__1der__</span></td><td><a href="https://www.bilibili.com/video/BV1XzmEBsENU?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警第一人称飞花园银行</span></td><td><span class="player-id">__1der__</span></td><td><a href="https://www.bilibili.com/video/BV1QhqjBdEWB/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>一称人道右出加一称三蹭花园银行</span></td><td><span class="player-id">__1der__</span></td><td><a href="https://www.bilibili.com/video/BV1R3qkBvEkw/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>第一人称人道叛乱分子义警七叶树飞采石场</span></td><td><span class="player-id">__1der__</span></td><td><a href="https://www.bilibili.com/video/BV1JJqDBAEJy/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警一人称蹭礁石加信号返程</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV1UcidBdEKy/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警一人称游艇返程飞花园银行</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV1CvrcBkEws/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警一人称信号</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV1CGidBEENQ/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警一人称飞房</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV135iRBFE6g/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>花园银行180蹭</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV1Z5veBCEGT/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警一人称建筑工地飞骷髅马</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV1rBrcB6EPf/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警一人称一蹭飞花园银行</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV1nJzHB4EMJ/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>义警一人称20连飞花园银行</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV1eQznB1EJR/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>电竞级帧数8帧飞花园银行</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV1pccPzAEwP/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>电竞级帧数8帧一人称飞花园银行</span></td><td><span class="player-id">___1der___</span></td><td><a href="https://www.bilibili.com/video/BV1gwcAzkEtX/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- 更多视频提示 -->
-                <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 204, 0, 0.1);">
-                    <p style="color: #666; font-size: 14px;">
-                        <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
-                        想要展示您的义警操作？联系我们上传您的精彩视频！
-                    </p>
+
+                <!-- ---------- 玩家：Enderman_精灵 ---------- -->
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-user-ninja"></i>
+                            <span class="player-name">Enderman_精灵</span>
+
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="video-table-container">
+                            <table class="video-table">
+                                <thead><tr><th>视频标题</th><th>大佬ID</th><th>链接</th></tr></thead>
+                                <tbody>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>极限操作，无悬停精准落花园银行</span></td><td><span class="player-id">Enderman_精灵</span></td><td><a href="https://www.bilibili.com/video/BV14ea3zrE9a/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>这不是倒放？无悬停磕上花园银行</span></td><td><span class="player-id">Enderman_精灵</span></td><td><a href="https://www.bilibili.com/video/BV1VLEwzdEqr/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- ---------- 玩家：___________________M / KO..... 等稀有ID合并为“其他大佬” ---------- -->
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-user-ninja"></i>
+                            <span class="player-name">木师傅_muxi0115</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="video-table-container">
+                            <table class="video-table">
+                                <thead><tr><th>视频标题</th><th>大佬ID</th><th>链接</th></tr></thead>
+                                <tbody>
+                                    
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>人道义警102.263</span></td><td><span class="player-id">KO.....</span></td><td><a href="https://www.bilibili.com/video/BV1XNqsB2EFq/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>腐肉为引，香水为信</span></td><td><span class="player-id">木樨木兮</span></td><td><a href="https://www.bilibili.com/video/BV12RUKBSE3N/?share_source=copy_web" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>新时代QQ飞车</span></td><td><span class="player-id">muxi</span></td><td><a href="https://www.bilibili.com/video/BV1aP4iz6EBu/?share_source=copy_web" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>《我的义警会后空翻~》</span></td><td><span class="player-id">_____Ad_Gai_____</span></td><td><a href="https://www.bilibili.com/video/BV1PG6TBfEnB/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>好险！差点让共荣保险好起来了</span></td><td><span class="player-id">_____Ad_Gai_____</span></td><td><a href="https://www.bilibili.com/video/BV13KzzBFE9A/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-user-ninja"></i>
+                            <span class="player-name">_____Ad_Gai_____</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="video-table-container">
+                            <table class="video-table">
+                                <thead><tr><th>视频标题</th><th>大佬ID</th><th>链接</th></tr></thead>
+                                <tbody>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>《我的义警会后空翻~》</span></td><td><span class="player-id">_____Ad_Gai_____</span></td><td><a href="https://www.bilibili.com/video/BV1PG6TBfEnB/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>好险！差点让共荣保险好起来了</span></td><td><span class="player-id">_____Ad_Gai_____</span></td><td><a href="https://www.bilibili.com/video/BV13KzzBFE9A/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-user-ninja"></i>
+                            <span class="player-name">KO大蛇</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="video-table-container">
+                            <table class="video-table">
+                                <thead><tr><th>视频标题</th><th>大佬ID</th><th>链接</th></tr></thead>
+                                <tbody>
+                                    <tr><td><span class="video-title"><i class="fas fa-play-circle"></i>人道义警102.263</span></td><td><span class="player-id">KO.....</span></td><td><a href="https://www.bilibili.com/video/BV1XNqsB2EFq/?vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">观看视频</a></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- 折叠容器结束 -->
+
+            <!-- 脚注提示 -->
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 204, 0, 0.1);">
+                <p style="color: #666; font-size: 14px;">
+                    <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
+                    想要展示您的义警操作？联系我们上传您的精彩视频！
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <!-- 建议反馈 -->
   <!-- 建议反馈 -->
 <section id="suggestion">
@@ -3604,6 +3226,83 @@ function resetSuggestionForm() {
                 }
             });
         });
+         // 全局切换函数 —— 点击头部展开/收起当前组
+    window.toggleGroup = function(headerElement) {
+        // 获取当前组的内容区域 (.player-group-content)
+        const group = headerElement.closest('.video-player-group');
+        const content = group.querySelector('.player-group-content');
+        const icon = headerElement.querySelector('.toggle-icon i');
+        
+        // 切换active类（用于图标旋转）
+        headerElement.classList.toggle('active');
+        
+        if (content.classList.contains('expanded')) {
+            // 收起
+            content.classList.remove('expanded');
+            if (icon) icon.className = 'fas fa-chevron-down';
+        } else {
+            // 展开前先把其他打开的组关闭 (实现手风琴效果，可选)
+            // 如果想保留多个同时展开，注释掉下面for循环即可
+            const allContents = document.querySelectorAll('.player-group-content');
+            const allHeaders = document.querySelectorAll('.player-group-header');
+            allContents.forEach(c => {
+                if (c !== content) c.classList.remove('expanded');
+            });
+            allHeaders.forEach(h => {
+                if (h !== headerElement) h.classList.remove('active');
+                const otherIcon = h.querySelector('.toggle-icon i');
+                if (otherIcon && h !== headerElement) otherIcon.className = 'fas fa-chevron-down';
+            });
+            
+            // 展开当前
+            content.classList.add('expanded');
+            if (icon) icon.className = 'fas fa-chevron-up';
+        }
+    };
+
+    // 初始化：保证所有组默认收起 (并且图标正确)
+    document.addEventListener('DOMContentLoaded', function() {
+        const groups = document.querySelectorAll('.video-player-group');
+        groups.forEach(group => {
+            const header = group.querySelector('.player-group-header');
+            const content = group.querySelector('.player-group-content');
+            const icon = header?.querySelector('.toggle-icon i');
+            
+            if (content) content.classList.remove('expanded');
+            if (header) header.classList.remove('active');
+            if (icon) icon.className = 'fas fa-chevron-down';
+        });
+
+        // 修复复制QQ按钮事件冲突 (原页面存在)
+        const copyBtn = document.querySelector('.btn[href="#"]');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const qqNumber = '1067206166';
+                navigator.clipboard.writeText(qqNumber).then(() => {
+                    alert('QQ群号已复制: ' + qqNumber); // 加个简单提示
+                }, () => {
+                    alert('复制失败，请手动复制: ' + qqNumber);
+                });
+            });
+        }
+
+        // 平滑滚动保留
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
     </script>
 </body>
 </html>
