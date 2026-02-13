@@ -919,7 +919,7 @@
     }
     /* 展开状态 */
     .player-group-content.expanded {
-        max-height: 2000px;    /* 足够容纳所有视频行 */
+        max-height: 7000px;    /* 足够容纳所有视频行 */
         opacity: 1;
         padding: 20px 20px 25px;
         border-top-width: 1px;
@@ -2498,10 +2498,10 @@
             <div class="video-collapse-container">
                 <!-- ---------- 玩家：____Mgonal____ ---------- -->
                 <div class="video-player-group">
-                    <div class="player-group-header" onclick="toggleGroup(this)">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
                         <div class="player-group-title">
                             <i class="fas fa-user-ninja"></i>
-                            <span class="player-name">____Mgonal____</span>
+                            <span class="player-name">_____Mgonal_____</span>
                         </div>
                         <div class="toggle-icon">
                             <i class="fas fa-chevron-down"></i>
@@ -2533,7 +2533,7 @@
 
                 <!-- ---------- 玩家：__1der__ / ___1der___ ---------- (合并为1der系列) -->
                 <div class="video-player-group">
-                    <div class="player-group-header" onclick="toggleGroup(this)">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
                         <div class="player-group-title">
                             <i class="fas fa-user-ninja"></i>
                             <span class="player-name">__1der__ 系列</span>
@@ -2572,7 +2572,7 @@
 
                 <!-- ---------- 玩家：Enderman_精灵 ---------- -->
                 <div class="video-player-group">
-                    <div class="player-group-header" onclick="toggleGroup(this)">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
                         <div class="player-group-title">
                             <i class="fas fa-user-ninja"></i>
                             <span class="player-name">Enderman_精灵</span>
@@ -2597,7 +2597,7 @@
 
                 <!-- ---------- 玩家：___________________M / KO..... 等稀有ID合并为“其他大佬” ---------- -->
                 <div class="video-player-group">
-                    <div class="player-group-header" onclick="toggleGroup(this)">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
                         <div class="player-group-title">
                             <i class="fas fa-user-ninja"></i>
                             <span class="player-name">木师傅_muxi0115</span>
@@ -2620,7 +2620,7 @@
                     </div>
                 </div>
                 <div class="video-player-group">
-                    <div class="player-group-header" onclick="toggleGroup(this)">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
                         <div class="player-group-title">
                             <i class="fas fa-user-ninja"></i>
                             <span class="player-name">_____Ad_Gai_____</span>
@@ -2642,7 +2642,7 @@
                     </div>
                 </div>
                 <div class="video-player-group">
-                    <div class="player-group-header" onclick="toggleGroup(this)">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
                         <div class="player-group-title">
                             <i class="fas fa-user-ninja"></i>
                             <span class="player-name">KO大蛇</span>
@@ -2663,7 +2663,7 @@
                     </div>
                 </div>
                 <div class="video-player-group">
-                    <div class="player-group-header" onclick="toggleGroup(this)">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
                         <div class="player-group-title">
                             <i class="fas fa-user-ninja"></i>
                             <span class="player-name">QuoVadis8_</span>
@@ -2884,712 +2884,948 @@
         </div>
     </div>
 </section>
-    <!-- 练习差事 -->
- <section id="practices">
-      <div class="container">
-          <div class="section-title">
-              <h2>练习差事</h2>
-          </div>
-          <div class="practice-categories">
-              <!-- 基础训练分类 -->
-              <div class="category">
-                  <div class="category-header">
-                      <i class="fas fa-graduation-cap category-icon"></i>
-                      <h3 class="category-title">任务训练图</h3>
-                  </div>
-                  <div class="practices-grid">
-                     <div class="practice-card">
-                         <h3><i class="fas fa-car"></i>人道义警训练（多点练习图）</h3>
-                         <p>人道</p>
-                         <p>义警</p>
-                         <p>多点，可跳伞</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/g4xZ09Uvd0q5N_gb0n-GHg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-helicopter"></i>人道义警训练图</h3>
-                         <p>人道</p>
-                         <p>义警</p>
-                         <p>单点，可跳伞</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/xax9Z4aZE0-oeLNEKw5k7g" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-helicopter"></i>人道义警单点训练图</h3>
-                         <p>人道</p>
-                         <p>义警</p>
-                         <p>单点，可开自己的义警</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/YWzqVAE31EuJX1G3JjSuXQ" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                         <div class="practice-card">
-                         <h3><i class="fas fa-helicopter"></i>蹭到房子就可以飞房成功了！</h3>
-                         <p>人道</p>
-                         <p>义警</p>
-                         <p>飞房练习MMMMMMMgonal</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/l59d0JKcfUeTcjJOZEAOrg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>义警飞花园银行</h3>
-                         <p>越狱行刺</p>
-                         <p>义警</p>
-                         <p>对</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/6EEMQnRsZ0ahfyPVxre3dQ" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>首轮募资返程飞楼</h3>
-                         <p>首轮游艇</p>
-                         <p>义警</p>
-                         <p>一生之敌</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/923KsK-AoUmUOGcBILoYKQ" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>太平洋信号飞岛</h3>
-                         <p>太平洋信号</p>
-                         <p>义警</p>
-                         <p>路线最多的一集</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/9CKeTYREDUiMaEA_w5x-Zg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>太平洋信号返程</h3>
-                         <p>信号离岛</p>
-                         <p>义警</p>
-                         <p>阿伟你好</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/rrbul6tuikGdp469IZAIpw" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                      <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>信号蹭礁练习(山脚版)</h3>
-                         <p>蹭蹭</p>
-                         <p>义警</p>
-                         <p>军事基地旁边</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/TtAVrygGf0OzOa6CzAfYtA" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                      <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>信号蹭礁练习山脊版）</h3>
-                         <p>蹭蹭</p>
-                         <p>义警</p>
-                         <p>差一步（  ）</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/vx6SJiaVi0OUW19yterYTg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>上岛+信号后半段</h3>
-                         <p>蹭蹭</p>
-                         <p>义警</p>
-                         <p>莫甘娜大蛇倾情提供</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/5RMfMuzpyk2EGGJd0UxxHQ" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>VigilanteFlyingSignalCode</h3>
-                         <p>Vigilante Flying Signal Code(义警飞信号)</p>
-                         <p>义警</p>
-                         <p>莫甘娜大蛇倾情提供</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/SkQbdZLbfEON9TGoRc5O7A" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                      <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>太平洋信号北线练习</h3>
-                         <p>太平洋信号</p>
-                         <p>义警</p>
-                         <p>多点位练习 可反复练习踩礁石</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/C6JPHCIGdEGAkkK_D8WX1g  " class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>飞房</h3>
-                         <p>喜欢飞房，拦不住的</p>
-                         <p>义警</p>
-                         <p>fk飞房</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/DuZzJPRHNUGAjtQdIfjF2g" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>当当钟（终章义警飞山）</h3>
-                         <p>莫甘娜大蛇专用路线</p>
-                         <p>义警</p>
-                         <p>魔怔(</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/_QBuXDacLkCHTrOB1m0QlQ" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>麦肯机场义警飞山拿莫古尔</h3>
-                         <p>莫甘娜大蛇专用路线</p>
-                         <p>义警</p>
-                         <p>我嘞个义警大蛇</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/oM8s6vFUfUO9HwG-Fr4vOg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>麦伟雷飞骷髅马</h3>
-                         <p>莫甘娜大蛇专用路线</p>
-                         <p>义警</p>
-                         <p>魔怔(</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/JjPnNY8D5EeSaxEvssCrVA" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>佩罗飞货轮(U型绕洛圣都)</h3>
-                         <p>莫甘娜大蛇专用路线</p>
-                         <p>义警</p>
-                         <p>魔怔(</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/ydAEs6152kiegAAp4WNccw" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>义警练习基础图</h3>
-                         <p>纯练</p>
-                         <p>义警</p>
-                         <p>包爽的</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/LrnaVQj1RUeU0YyzLdBkkw" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>人道枪手义警训练</h3>
-                         <p>附带埋雷点位</p>
-                         <p>义警</p>
-                         <p>小心螺旋桨</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/GnTzJpfLYESTpHpza0v-sg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>太平洋分红:雷克卓</h3>
-                         <p>pac</p>
-                         <p>雷克卓</p>
-                         <p>请选择你的死亡方式</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/ThFSjKDO6EWVBBfEMEu3GA" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>越狱埋雷训练图</h3>
-                         <p>玉玉</p>
-                         <p>感应雷粘痰</p>
-                         <p>rerere</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/dnUX5xnkskaDZdBKSkWKqg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>全福骷髅马练习</h3>
-                         <p>全福</p>
-                         <p>骷髅马</p>
-                         <p>也够路人</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/P7LgfMiJ3EuvTeczd8lqMg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>爆头练习图</h3>
-                         <p>稳住</p>
-                         <p>枪</p>
-                         <p>颗秒大神就是你</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/yfSSyYA-H0ei5SwmHGXhbg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>卡爆炸子弹</h3>
-                         <p>柴柴真心厉害</p>
-                         <p>爆炸狙爆炸喷</p>
-                         <p>进去直接退就行</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/TMAlioOK5keLeTY6OoX_YQ" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>末日三破解练习</h3>
-                         <p>m3破解</p>
-                         <p>手</p>
-                         <p>小心，破解最后一个球退了就行</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/3zjaE4AAREWrTdsJJihERQ" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>末日三义警拿车练习</h3>
-                         <p>末日三</p>
-                         <p>义警</p>
-                         <p>魔怔</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/f5UfmAFIUUGpAbelgrz7-w" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                       <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>射击提升差事</h3>
-                         <p>属性提升</p>
-                         <p>小哑巴</p>
-                         <p>秋月大蛇鼎力支持</p>
-                         <!-- 这里添加超链接 -->
-                         <a href=" https://socialclub.rockstargames.com/job/gtav/TKbX7wjB0U-pjDk4kGmmww" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                       <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>飞行提升差事</h3>
-                         <p>属性提升</p>
-                         <p>小哑巴</p>
-                         <p>秋月大蛇倾情奉献</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/wIWcfTEOIE-otkI6T3MJCw" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                       <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>驾驶提升差事</h3>
-                         <p>属性提升</p>
-                         <p>小哑巴</p>
-                         <p>秋月大蛇鼎力提供</p>
-                         <!-- 这里添加超链接 -->
-                         <a href=" https://socialclub.rockstargames.com/job/gtav/9kHfm1sBx0GYjF1u7IPmXg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                       <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>力量提升差事</h3>
-                         <p>属性提升</p>
-                         <p>小哑巴</p>
-                         <p>秋月大蛇友情赞助</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/2isUiRhS8ESgzu5w" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div>
-                  </div>
-              </div>
-              
-              <!-- 进阶技能分类 -->
-              <div class="category">
-                  <div class="category-header">
-                      <i class="fas fa-fire category-icon"></i>
-                      <h3 class="category-title">义警1-8</h3>
-                  </div>
-                  <div class="practices-grid">
-                     <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>义警1</h3>
-                         <p>最简单的义警图</p>
-                         <p>义警</p>
-                         <p>基础</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/FTnnRwGkY0egrC1GxQHJkA" class="practice-link" target="_blank">跳转差事页面 →</a>
-                         <br> 
-                         <a href="https://www.bilibili.com/video/BV1yvSpBhEY9/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        义警1-7的通关视频
-                                    </a>
-                        </div>
-                       <div class="practice-card">
-                          <h3><i class="fas fa-users"></i>义警2</h3>
-                          <p>最简单的义警图</p>
-                          <p>义警</p>
-                          <p>基础</p>
-                          <!-- 这里添加超链接 -->
-                          <a href="https://socialclub.rockstargames.com/job/gtav/Ud3XxcyU2EaQLcfWFN8ZYg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                      </div>
-                      <div class="practice-card">
-                         <h3><i class="fas fa-users"></i>义警3</h3>
-                         <p>义警3</p>
-                         <p>义警</p>
-                         <p>基础</p>
-                         <!-- 这里添加超链接 -->
-                         <a href="https://socialclub.rockstargames.com/job/gtav/iqbzpXOW2Eyoc_gOgNOMQA" class="practice-link" target="_blank">跳转差事页面 →</a>
-                     </div> <div class="practice-card">
-                          <h3><i class="fas fa-users"></i>义警4</h3>
-                          <p>义警4</p>
-                          <p>义警</p>
-                          <p>基础</p>
-                          <!-- 这里添加超链接 -->
-                          <a href="https://socialclub.rockstargames.com/job/gtav/O8Cs0_PHTkCXhNCkmT9_dg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                      </div> <div class="practice-card">
-                          <h3><i class="fas fa-users"></i>义警5</h3>
-                          <p>义警5</p>
-                          <p>义警</p>
-                          <p>进阶</p>
-                          <!-- 这里添加超链接 -->
-                          <a href="https://socialclub.rockstargames.com/job/gtav/9GjAGZuQI0OcWx4aoPvYDg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                      </div> <div class="practice-card">
-                          <h3><i class="fas fa-users"></i>义警6</h3>
-                          <p>义警6</p>
-                          <p>义警</p>
-                          <p>进阶</p>
-                          <!-- 这里添加超链接 -->
-                          <a href="https://socialclub.rockstargames.com/job/gtav/_EpssGUCIEuhSMxSrR5RCw" class="practice-link" target="_blank">跳转差事页面 →</a>
-                      </div> <div class="practice-card">
-                          <h3><i class="fas fa-users"></i>义警7</h3>
-                          <p>义警7</p>
-                          <p>义警</p>
-                          <p>进阶</p>
-                          <!-- 这里添加超链接 -->
-                          <a href="https://socialclub.rockstargames.com/job/gtav/pO7ntCE8okuNuix8QSBz_Q" class="practice-link" target="_blank">跳转差事页面 →</a>
-                      </div> <div class="practice-card">
-                          <h3><i class="fas fa-users"></i>义警8</h3>
-                          <p>沟槽的图</p>
-                          <p>义警</p>
-                          <p>究极无敌扫码图</p>
-                          <!-- 这里添加超链接 -->
-                          <a href="https://socialclub.rockstargames.com/job/gtav/b6X8zmSxDU6e8jidWaT7mg" class="practice-link" target="_blank">跳转差事页面 →</a>
-                      </div>
- 						                    </div>
- 						</div>
-						<div class="category">
-						    <div class="category-header">
-						        <i class="fas fa-fire category-icon"></i>
-						        <h3 class="category-title">精灵的图（极品好图）</h3>
-						    </div>
-						    <div class="practices-grid">
-								<div class="practice-card">
-								    <h3><i class="fas fa-users"></i>最新的一张图</h3>
-								    <p>曹精灵说不难</p>
-								    <p>义警</p>
-								    <p>过了前两个点之后确实不难，后面很好玩</p>
-								    <!-- 这里添加超链接 -->
-								    <a href="https://socialclub.rockstargames.com/job/gtav/i8VEUE3P_UuTFH8CPiNuGA"class="practice-link" target="_blank">跳转差事页面 →</a>
-								</div>
-								<div class="practice-card">
-								    <h3><i class="fas fa-users"></i>Vigilante Skill Test#1 (Easy Ver)</h3>
-								    <p>简单版</p>
-								    <p>义警</p>
-								    <p>全是享受</p>
-								    <!-- 这里添加超链接 -->
-								    <a href="https://socialclub.rockstargames.com/job/gtav/DSpPcDE4KU6-gLBhqWyIGw" class="practice-link" target="_blank">跳转差事页面 →</a>
-								</div>
-								<div class="practice-card">
-						    <h3><i class="fas fa-users"></i>落红不是无情物</h3>
-						    <p>上一张图的困难版</p>
-						    <p>义警</p>
-						    <p>全是享受</p>
-						    <!-- 这里添加超链接 -->
-						    <a href="https://socialclub.rockstargames.com/job/gtav/3J4rVgd5NEOEWo7Yii9yVg" class="practice-link" target="_blank">跳转差事页面 →</a>
-						</div>
-						<div class="practice-card">
-						    <h3><i class="fas fa-users"></i>狂雷图</h3>
-						    <p>一张有难度但不是特别难的狂雷+义警特技图</p>
-						    <p>狂雷</p>
-						    <p>豪丸</p>
-						    <!-- 这里添加超链接 -->
-						    <a href="https://socialclub.rockstargames.com/job/gtav/aZY5h41eVEqDyJD7VMXNxQ" class="practice-link" target="_blank">跳转差事页面 →</a>
-						</div>
-						<div class="practice-card">
-						    <h3><i class="fas fa-users"></i>狂雷图</h3>
-						    <p>一张火箭狂雷娱乐图(有些许难度)</p>
-						    <p>狂雷</p>
-						    <p>豪丸</p>
-						    <!-- 这里添加超链接 -->
-						    <a href="https://socialclub.rockstargames.com/job/gtav/HxNcToVJkUe7utPApgS3qQ" class="practice-link" target="_blank">跳转差事页面 →</a>
-						</div>
-                        <div class="practice-card">
-						    <h3><i class="fas fa-users"></i>JE's Challenge to QuoVadis8</h3>
-						    <p>给QuoVadis8做的火箭狂雷爽图 25min good luck. bilibili：Enderman_精灵 11.20已更新</p>
-						    <p>义警</p>
-						    <p>爽啊图</p>
-						    <!-- 这里添加超链接 -->
-						    <a href="https://socialclub.rockstargames.com/job/gtav/5NWTPQBUKkeeQwxJZGsBuw" class="practice-link" target="_blank">跳转差事页面 →</a>
-						</div>
-                         <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>东边日出西边雨</h3>
- 					    <p>最帅的一张图</p>
- 					    <p>义警</p>
- 					    <p>这想象力无敌了</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/ZnZaukU6d0C3DiPDakftkg" class="practice-link" target="_blank">跳转差事页面 →</a><br>
-                         <a href="bilibili.com/video/BV1Gni4BnEdi/?spm_id_from=333.1387.homepage.video_card.click" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        东边日出西边雨(系列最后一张！)
-                                    </a>
+<!-- 练习差事 - 折叠分类样式（和大佬视频一样） -->
+<section id="practices">
+    <div class="container">
+        <div class="section-title">
+            <h2>练习差事</h2>
+        </div>
+        
+        <div class="showcase-container">
+            <div class="showcase-header">
+                <div class="showcase-header-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>精选练习差事</h3>
+                <p class="subtitle">按分类整理 · 点击展开查看</p>
+                <p style="font-size: 14px; color: #ffcc00; margin-top: 8px;">
+                    <i class="fas fa-hand-pointer"></i> 点击分类标题展开/收起该类别
+                </p>
+            </div>
+            
+            <!-- 折叠分类容器 -->
+            <div class="video-collapse-container">
+                
+               <!-- 1. 任务训练图分类 - 重新分成4个小类 -->
+<!-- 1. 任务训练图分类 - 带二级折叠 -->
+<div class="video-player-group">
+    <div class="player-group-header" onclick="toggleMainGroup(this)">
+        <div class="player-group-title">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="player-name">任务训练图</span>
+            <span class="video-count" style="background: rgba(255,204,0,0.15);">33个差事</span>
+        </div>
+        <div class="toggle-icon">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+    <div class="player-group-content">
+        <!-- 二级折叠容器 -->
+        <div class="video-collapse-container" style="margin-top: 10px;">
+            
+            <!-- 人道训练图 二级折叠 -->
+            <div class="video-player-group" style="margin-bottom: 10px; border-left: 2px solid rgba(255,204,0,0.3);">
+                <div class="player-group-header" onclick="toggleSubGroup(this)" style="padding: 12px 20px; background: rgba(30,30,30,0.6);">
+                    <div class="player-group-title">
+                        <i class="fas fa-helicopter" style="color: #ffcc00;"></i>
+                        <span class="player-name" style="font-size: 16px;">🚁 人道训练图</span>
+                        <span class="video-count" style="background: rgba(255,204,0,0.15); font-size: 12px;">6个差事</span>
                     </div>
-						                    </div>
-						</div>
- <div class="category">
-                  <div class="category-header">
-                      <i class="fas fa-fire category-icon"></i>
-                      <h3 class="category-title">精选喷射图</h3>
-                  </div>
- 					  <div class="practices-grid">
- 				<div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>超绝爽图</h3>
- 					    <p>这个是真的爽</p>
- 					    <p>狂雷</p>
- 					    <p>带派</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/XrBjOMpeGkC-B_ozkmK0Vw" class="practice-link" target="_blank">跳转差事页面 →</a>
- 					</div>
- 					<div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>豪图</h3>
- 					    <p>别看评分低</p>
- 					    <p>狂雷</p>
- 					    <p>其实这个真是爽图</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/KWbhKGAUDEOGihQScGbC4Q" class="practice-link" target="_blank">跳转差事页面 →</a>
- 					</div>
- 					<div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>基础小短图</h3>
- 					    <p>简单的一</p>
- 					    <p>狂雷</p>
- 					    <p>适合新手玩</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/dDcvBuThsEOKsSjcA1RjEg" class="practice-link" target="_blank">跳转差事页面 →</a>
- 					</div>
- 					<div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>ROCKET.REP #17</h3>
- 					    <p>Hola hoy les traigo una carrera turbo dedicada a soy_faustino espero les guste :) #Soy_Faustino #Yosias15 #Danirep #Kosi023 #Maicol_RyT #Sebas23____ #LuuuDRML #TioRompe #Matuchii #FrannModz51</p>
- 					    <p>狂雷</p>
- 					    <p>12好评</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/gSZl8A6pNkip1C8ydXbMsw" class="practice-link" target="_blank">跳转差事页面 →</a>
- 					</div>
-                    <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i> [Vuela Turboo G48] (LosTitaNeSs5503)</h3>
- 					    <p>Si carrera de volar con rocket made by LosTitaNeSs5503, copied from xbóx one!</p>
- 					    <p>狂雷</p>
- 					    <p>39好评</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/NZkBV61GLECFjZ7CN81btQ" class="practice-link" target="_blank">跳转差事页面 →</a>
- 					</div>
-                    <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i> ! Saltos R. Voltic #1.2 (Totopoz_576)</h3>
- 					    <p>Segunda Versión de la 1, Difucultad Facil, Saltos Con Rocket Voltic espero les guste</p>
- 					    <p>狂雷</p>
- 					    <p>21好评</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/0Nsirl5v7EiHEDzhWFKitQ" class="practice-link" target="_blank">跳转差事页面 →</a>
- 					</div>
-                    <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>[GM51] ROCKET.REP 11 (IammGerman)</h3>
- 					    <p>Hola hoy les traigo Nueva Carrera Turbo Un Poco Difícil Con 15 Puntos Colaboración con Kevon Espero les guste :) XD</p>
- 					    <p>狂雷</p>
- 					    <p>7好评</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/7BE4AEJVkU-fmThJGGFAKQ" class="practice-link" target="_blank">跳转差事页面 →</a>
- 					</div>
-                    <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i> {E_} R.VolticSaltosKour 4 (Neocreator)</h3>
- 					    <p>Holaaa chicos y chicas , hoy os traigo una carrera de saltos con el Rocket Voltic por la ciudad , espero q lo disfruten</p>
- 					    <p>狂雷</p>
- 					    <p>19好评</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/9i-zHnBa3EquIdZGNQ-FrA" class="practice-link" target="_blank">跳转差事页面 →</a>
- 					</div>
-                    <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>Saltos R.Voltic #6 (Potenciiaa)</h3>
- 					    <p>Buenass, les traigo una nueva carrera turbo con saltos dificultad facil. Final: nivel 4/10 Espero les guste :)</p>
- 					    <p>狂雷</p>
- 					    <p>7好评(爽图，除了终点有点毒)</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/elgXy_U1Zk2SagyA9prZ0Q" class="practice-link" target="_blank">跳转差事页面 →</a>
- 					</div>
-                    <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>啊啊啊啊啊爽图</h3>
- 					    <p>终点有点黑</p>
- 					    <p>狂雷</p>
- 					    <p>舒服</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/XrBjOMpeGkC-B_ozkmK0Vw" class="practice-link" target="_blank">跳转差事页面 →</a><br>
-                         <a href="https://www.bilibili.com/video/BV1QZSuBMEHT/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        62连喷，真的爽啊
-                                    </a>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                   
- 				
-                     <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>ロケットヴォルティック#1</h3>
- 					    <p>ロケットヴォルティックレース</p>
- 					    <p>狂雷</p>
- 					    <p>15好评爽图</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/I5Ax37_nKkOpGJ5Vmkvmfw" class="practice-link" target="_blank">跳转差事页面 →</a><br>
-                         <a href="https://www.bilibili.com/video/BV1yxiFBwEh2/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                       U3nec0大佬做的一张火箭狂雷爽图
-                                    </a>
-                   
-                    </div>
-                     <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>ロケットヴォルティック#2</h3>
- 					    <p>ロケットヴォルティックレース</p>
- 					    <p>狂雷</p>
- 					    <p>29好评日本鸽爽图</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/pKBBQ0VtPE-pcmpUJnn9lA" class="practice-link" target="_blank">跳转差事页面 →</a><br>
-                         <a href="https://www.bilibili.com/video/BV1toi8BpEMe/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                       Rocket Voltic #2 [Easy]
-                                    </a>
-                 
-                    </div>
-                     <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>ロケットヴォルティック#3</h3>
- 					    <p>ロケットヴォルティックレース</p>
- 					    <p>狂雷</p>
- 					    <p>50好评日本鸽爽图</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/7pJLtsKDhEmu02tAfIE-2A" class="practice-link" target="_blank">跳转差事页面 →</a><br>
-                         <a href="https://www.bilibili.com/video/BV1moi8BpEv4/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                       【GTAO】Rocket Voltic #3 [Hard]
-                                    </a>
-                    </div>
-                     <div class="practice-card">
- 					    <h3><i class="fas fa-users"></i>ロケットヴォルティック#4</h3>
- 					    <p>ロケットボルテックレース</p>
- 					    <p>狂雷</p>
- 					    <p>80好评(爽图，木师傅精选的纯爽图)</p>
- 					    <!-- 这里添加超链接 -->
- 					    <a href="https://socialclub.rockstargames.com/job/gtav/waMkwbuzJkSICyNzIbca1g" class="practice-link" target="_blank">跳转差事页面 →</a>
-                         <a href="https://www.bilibili.com/video/BV1h5inBcEc3/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="video-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i>
-                                       Rocket Voltic #4 [Normal]
-                                    </a>
-                                    </div>
- 					         </div>
- 					</div>
- 					
- 					<div class="category">
- 					    <div class="category-header">
- 					        <i class="fas fa-fire category-icon"></i>
- 					        <h3 class="category-title">义警特技图</h3>
- 					    </div>
- 					    <div class="practices-grid">
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速1</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/1YlxiFpldEiY4Fb3dY69KA" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速2</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/fBSXAidCeUKDkPTxhbg9uQ" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速3</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/theQVdHlrEO7tLdrgai5hA" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速4</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/0nVun_uK3UO5ZGSwV2VAXg" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速5</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/ti3hsRm_7UeyL8Zo6TqL0g" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速6</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/tikL60VD7UqTPj1P9rqhlg" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速7</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/4IG00f7Av0KywQp4a6WGuw" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速8</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/9u5HZzVosUy7YMMHrGskEA" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速9</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/oA4ozojQhEKifOzY-AXlrA" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速10</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/UkDWQ025Q0Ooxnhi5CO2IA" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速11</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/FBWS5cyJcku5DTdtl3iglQ" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>义警特技竞速12</h3>
- 							    <p>义警特技竞速系列</p>
- 							    <p>义警</p>
- 							    <p>带派</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/dQ9Ko3po60ys5pJEU14jeA" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 											
- 							        </div>
-                                    <div class="category">
- 					    <div class="category-header">
- 					        <i class="fas fa-fire category-icon"></i>
- 					        <h3 class="category-title">图拉尔多喷射图</h3>
- 					    </div>
- 					    <div class="practices-grid">
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i> [RED]LipaoMegaSkill 19 (MeninoRedModz)</h3>
- 							    <p>FALA LIMPAO! nessa corrida level asian e muito salto com carro F1 e TOREADOR, level esay brasil, espero que gostem.</p>
- 							    <p>图拉尔多</p>
- 							    <p>8好评</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/hDxVF3srSEabyJo9qN3NdA" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>[RED] LipaoMegaSkill 29 (MeninoRedModz)</h3>
- 							    <p>FALA LIMPAO!!! Corrida com TOREADOR VOLUME 2 Level médio Brasil espero que gostem. YouTube: Red Oficial , copied from ps4!</p>
- 							    <p>图拉尔多</p>
- 							    <p>12好评</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/-_1W0l-nM0uUFFzvrCo54Q" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
- 							<div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>{E_} MULTI Saltos Turbo (ersino_YT)</h3>
- 							    <p>Holaaa chicos y chica , hoy os traigo una carrera de saltos con tres vehículos turbo , toreador , vigilante y scramjet , espero q lo disfruten</p>
- 							    <p>图拉尔多</p>
- 							    <p>23好评</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/Jka2pzkPmkqlosHyQV_tFQ" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
-                            <div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>Kawaii Skill Test XL-9 (HID_Die)</h3>
- 							    <p>Toreador Adventure * * // Enjoy This Vehicule, But Remember This ''DONT TOUCH THE WATER'' </p>
- 							    <p>图拉尔多</p>
- 							    <p>20好评</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/gA58YXsnbU6zhXLD6qdcmA" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
-                            <div class="practice-card">
- 							    <h3><i class="fas fa-users"></i>Toreador SuperSkillz (OG-Simpson)</h3>
- 							    <p>Toreador [NO CONTACT, NO CUSTOM] // LEVEL VEEERY HARD, NOT FOR NOOBS // Challenge Albatros 20min {Creator test 14min}</p>
- 							    <p>图拉尔多</p>
- 							    <p>10好评</p>
- 							    <!-- 这里添加超链接 -->
- 							    <a href="https://socialclub.rockstargames.com/job/gtav/aRjz71crJUG9IJkK6hSGxg" class="practice-link" target="_blank">跳转差事页面 →</a>
- 							</div>
+                </div>
+                <div class="player-group-content">
+                    <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px;">
+                        
+                        <!-- 1. 人道义警训练（多点练习图） -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-car"></i> 人道义警训练（多点练习图）</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">人道 · 义警 · 多点，可跳伞</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/g4xZ09Uvd0q5N_gb0n-GHg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
                             </div>
- 							    </div>
- 							</section>
+                        </div>
+                        
+                        <!-- 2. 人道义警训练图 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-helicopter"></i> 人道义警训练图</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">人道 · 义警 · 单点，可跳伞</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/xax9Z4aZE0-oeLNEKw5k7g" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 3. 人道义警单点训练图 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-helicopter"></i> 人道义警单点训练图</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">人道 · 义警 · 单点，可开自己的义警</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/YWzqVAE31EuJX1G3JjSuXQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 4. 蹭到房子就可以飞房成功了！ -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-helicopter"></i> 蹭到房子就可以飞房成功了！</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">人道 · 义警 · 飞房练习MMMMMMMgonal</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/l59d0JKcfUeTcjJOZEAOrg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 14. 人道枪手义警训练 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 人道枪手义警训练</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">附带埋雷点位 · 义警 · 小心螺旋桨</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/GnTzJpfLYESTpHpza0v-sg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                         <!-- 20. 飞房 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 飞房</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">喜欢飞房，拦不住的 · 义警 · fk飞房</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/DuZzJPRHNUGAjtQdIfjF2g" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 信号训练图 二级折叠 -->
+            <div class="video-player-group" style="margin-bottom: 10px; border-left: 2px solid rgba(255,204,0,0.3);">
+                <div class="player-group-header" onclick="toggleSubGroup(this)" style="padding: 12px 20px; background: rgba(30,30,30,0.6);">
+                    <div class="player-group-title">
+                        <i class="fas fa-water" style="color: #ffcc00;"></i>
+                        <span class="player-name" style="font-size: 16px;">📡 信号训练图</span>
+                        <span class="video-count" style="background: rgba(255,204,0,0.15); font-size: 12px;">7个差事</span>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="player-group-content">
+                    <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px;">
+                        
+                        <!-- 7. 太平洋信号飞岛 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 太平洋信号飞岛</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">太平洋信号 · 义警 · 路线最多的一集</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/9CKeTYREDUiMaEA_w5x-Zg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 8. 太平洋信号返程 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 太平洋信号返程</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">信号离岛 · 义警 · 阿伟你好</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/rrbul6tuikGdp469IZAIpw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 9. 信号蹭礁练习(山脚版) -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 信号蹭礁练习(山脚版)</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">蹭蹭 · 义警 · 军事基地旁边</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/TtAVrygGf0OzOa6CzAfYtA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 10. 信号蹭礁练习(山脊版) -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 信号蹭礁练习(山脊版)</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">蹭蹭 · 义警 · 差一步</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/vx6SJiaVi0OUW19yterYTg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 11. 上岛+信号后半段 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 上岛+信号后半段</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">蹭蹭 · 义警 · 莫甘娜大蛇倾情提供</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/5RMfMuzpyk2EGGJd0UxxHQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 12. VigilanteFlyingSignalCode -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> VigilanteFlyingSignalCode</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">Vigilante Flying Signal Code · 义警 · 莫甘娜大蛇倾情提供</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/SkQbdZLbfEON9TGoRc5O7A" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 13. 太平洋信号北线练习 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 太平洋信号北线练习</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">太平洋信号 · 义警 · 多点位练习 可反复练习踩礁石</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/C6JPHCIGdEGAkkK_D8WX1g" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 飞楼特训 二级折叠 -->
+            <div class="video-player-group" style="margin-bottom: 10px; border-left: 2px solid rgba(255,204,0,0.3);">
+                <div class="player-group-header" onclick="toggleSubGroup(this)" style="padding: 12px 20px; background: rgba(30,30,30,0.6);">
+                    <div class="player-group-title">
+                        <i class="fas fa-building" style="color: #ffcc00;"></i>
+                        <span class="player-name" style="font-size: 16px;">🏢 飞楼特训</span>
+                        <span class="video-count" style="background: rgba(255,204,0,0.15); font-size: 12px;">2个差事</span>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="player-group-content">
+                    <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px;">
+                        
+                        <!-- 5. 义警飞花园银行 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警飞花园银行</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">越狱行刺 · 义警 · 对</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/6EEMQnRsZ0ahfyPVxre3dQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 6. 首轮募资返程飞楼 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 首轮募资返程飞楼</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">首轮游艇 · 义警 · 一生之敌</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/923KsK-AoUmUOGcBILoYKQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-player-group" style="margin-bottom: 10px; border-left: 2px solid rgba(255,204,0,0.3);">
+                <div class="player-group-header" onclick="toggleSubGroup(this)" style="padding: 12px 20px; background: rgba(30,30,30,0.6);">
+                    <div class="player-group-title">
+                        <i class="fas fa-route" style="color: #ffcc00;"></i>
+                        <span class="player-name" style="font-size: 16px;">🗺️ 义警其他路线训练图</span>
+                        <span class="video-count" style="background: rgba(255,204,0,0.15); font-size: 12px;">4个差事</span>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="player-group-content">
+                    <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px;">
+                        <!-- 15. 当当钟（终章义警飞山） -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 当当钟（终章义警飞山）</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">莫甘娜大蛇专用路线 · 义警 · 魔怔(</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/_QBuXDacLkCHTrOB1m0QlQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 16. 麦肯机场义警飞山拿莫古尔 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 麦肯机场义警飞山拿莫古尔</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">莫甘娜大蛇专用路线 · 义警 · 我嘞个义警大蛇</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/oM8s6vFUfUO9HwG-Fr4vOg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 17. 麦伟雷飞骷髅马 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 麦伟雷飞骷髅马</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">莫甘娜大蛇专用路线 · 义警 · 魔怔(</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/JjPnNY8D5EeSaxEvssCrVA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        <!-- 18. 佩罗飞货轮(U型绕洛圣都) -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 佩罗飞货轮(U型绕洛圣都)</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">莫甘娜大蛇专用路线 · 义警 · 魔怔(</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/ydAEs6152kiegAAp4WNccw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-player-group" style="margin-bottom: 10px; border-left: 2px solid rgba(255,204,0,0.3);">
+                <div class="player-group-header" onclick="toggleSubGroup(this)" style="padding: 12px 20px; background: rgba(30,30,30,0.6);">
+                    <div class="player-group-title">
+                        <i class="fas fa-history" style="color: #ffcc00;"></i>
+                        <span class="player-name" style="font-size: 16px;">📜 老抢劫训练图</span>
+                        <span class="video-count" style="background: rgba(255,204,0,0.15); font-size: 12px;">4个差事</span>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="player-group-content">
+                    <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px;">
+                        
+                        <!-- 21. 太平洋分红:雷克卓 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 太平洋分红:雷克卓</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">pac · 雷克卓 · 请选择你的死亡方式</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/ThFSjKDO6EWVBBfEMEu3GA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 22. 越狱埋雷训练图 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 越狱埋雷训练图</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">玉玉 · 感应雷粘痰 · rerere</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/dnUX5xnkskaDZdBKSkWKqg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 23. 全福骷髅马练习 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 全福骷髅马练习</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">全福 · 骷髅马 · 也够路人</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/P7LgfMiJ3EuvTeczd8lqMg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 24. 无恶意单人M3破解+刷力量+全福银行钻孔练习差事 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 无恶意单人M3破解+刷力量+全福银行钻孔练习差事</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">练什么搞什么 · 钻孔,练习,破解 · 星风大蛇做的图</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/YVIZjD9N5EaZKSB6ynnsIg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                <a href="https://www.bilibili.com/video/BV1DGaAz9EuB?spm_id_from=333.788.player.switch&vd_source=7cc441982868bc14300ee89dcccc3e32&p=2" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,51,51,0.15); border: 1px solid #ff3333; border-radius: 25px; color: #ff6666; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.3s;">差事介绍视频</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="video-player-group" style="margin-bottom: 10px; border-left: 2px solid rgba(255,204,0,0.3);">
+                <div class="player-group-header" onclick="toggleSubGroup(this)" style="padding: 12px 20px; background: rgba(30,30,30,0.6);">
+                    <div class="player-group-title">
+                        <i class="fas fa-skull" style="color: #ffcc00;"></i>
+                        <span class="player-name" style="font-size: 16px;">💀 末日豪劫训练图</span>
+                        <span class="video-count" style="background: rgba(255,204,0,0.15); font-size: 12px;">5个差事</span>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="player-group-content">
+                    <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px;">
+                        
+                        <!-- 24. 无恶意单人M3破解+刷力量+全福银行钻孔练习差事 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 无恶意单人M3破解+刷力量+全福银行钻孔练习差事</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">练什么搞什么 · 钻孔,练习,破解 · 星风大蛇做的图</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/YVIZjD9N5EaZKSB6ynnsIg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                <a href="https://www.bilibili.com/video/BV1DGaAz9EuB?spm_id_from=333.788.player.switch&vd_source=7cc441982868bc14300ee89dcccc3e32&p=2" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,51,51,0.15); border: 1px solid #ff3333; border-radius: 25px; color: #ff6666; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.3s;">差事介绍视频</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 25. 爆头练习图 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 爆头练习图</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">稳住 · 枪 · 颗秒大神就是你</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/yfSSyYA-H0ei5SwmHGXhbg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 26. 卡爆炸子弹 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 卡爆炸子弹</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">柴柴真心厉害 · 爆炸狙爆炸喷 · 进去直接退就行</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/TMAlioOK5keLeTY6OoX_YQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 27. 末日三破解练习 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 末日三破解练习</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">m3破解 · 手 · 小心，破解最后一个球退了就行</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/3zjaE4AAREWrTdsJJihERQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 28. 末日三义警拿车练习 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 末日三义警拿车练习</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">末日三 · 义警 · 魔怔</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/f5UfmAFIUUGpAbelgrz7-w" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 其他训练图 二级折叠 -->
+            <div class="video-player-group" style="margin-bottom: 10px; border-left: 2px solid rgba(255,204,0,0.3);">
+                <div class="player-group-header" onclick="toggleSubGroup(this)" style="padding: 12px 20px; background: rgba(30,30,30,0.6);">
+                    <div class="player-group-title">
+                        <i class="fas fa-tasks" style="color: #ffcc00;"></i>
+                        <span class="player-name" style="font-size: 16px;">📋 其他训练图(包括提升属性)</span>
+                        <span class="video-count" style="background: rgba(255,204,0,0.15); font-size: 12px;">5个差事</span>
+                    </div>
+                    <div class="toggle-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="player-group-content">
+                    <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px;">
+                        
+                        
+                        
+                        <!-- 19. 义警练习基础图 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警练习基础图</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">纯练 · 义警 · 包爽的</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/LrnaVQj1RUeU0YyzLdBkkw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- 29. 射击提升差事 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 射击提升差事</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">属性提升 · 小哑巴 · 秋月大蛇鼎力支持</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/TKbX7wjB0U-pjDk4kGmmww" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 30. 飞行提升差事 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 飞行提升差事</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">属性提升 · 小哑巴 · 秋月大蛇倾情奉献</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/wIWcfTEOIE-otkI6T3MJCw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 31. 驾驶提升差事 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 驾驶提升差事</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">属性提升 · 小哑巴 · 秋月大蛇鼎力提供</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/9kHfm1sBx0GYjF1u7IPmXg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 32. 力量提升差事 -->
+                        <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                            <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 力量提升差事</h3>
+                            <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">属性提升 · 小哑巴 · 秋月大蛇友情赞助</p>
+                            <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <a href="https://socialclub.rockstargames.com/job/gtav/2isUiRhS8ESgzu5w" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事页面 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+                <!-- 2. 义警1-8 系列 -->
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-fire"></i>
+                            <span class="player-name">义警1-8系列</span>
+                            <span class="video-count" style="background: rgba(255,204,0,0.15);">8个差事</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; padding: 15px;">
+                            
+                            <!-- 义警1-8所有卡片 -->
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警1</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">最简单的义警图 · 义警 · 基础</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/FTnnRwGkY0egrC1GxQHJkA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                    <a href="https://www.bilibili.com/video/BV1yvSpBhEY9/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,51,51,0.15); border: 1px solid #ff3333; border-radius: 25px; color: #ff6666; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.3s;">义警1-7通关视频</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警2</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">最简单的义警图 · 义警 · 基础</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/Ud3XxcyU2EaQLcfWFN8ZYg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警3</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警3 · 义警 · 基础</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/iqbzpXOW2Eyoc_gOgNOMQA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警4</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警4 · 义警 · 基础</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/O8Cs0_PHTkCXhNCkmT9_dg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警5</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警5 · 义警 · 进阶</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/9GjAGZuQI0OcWx4aoPvYDg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警6</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警6 · 义警 · 进阶</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/_EpssGUCIEuhSMxSrR5RCw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警7</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警7 · 义警 · 进阶</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/pO7ntCE8okuNuix8QSBz_Q" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警8</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">沟槽的图 · 义警 · 究极无敌扫码图</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/b6X8zmSxDU6e8jidWaT7mg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3. 精灵的图（极品好图） -->
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-star"></i>
+                            <span class="player-name">精灵的图（极品好图）</span>
+                            <span class="video-count" style="background: rgba(255,204,0,0.15);">7个差事</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; padding: 15px;">
+                            
+                            <!-- 精灵的图所有卡片 -->
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 最新的一张图</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">曹精灵说不难 · 义警 · 过了前两个点之后确实不难，后面很好玩</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/i8VEUE3P_UuTFH8CPiNuGA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> Vigilante Skill Test#1 (Easy Ver)</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">简单版 · 义警 · 全是享受</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/DSpPcDE4KU6-gLBhqWyIGw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 落红不是无情物</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">上一张图的困难版 · 义警 · 全是享受</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/3J4rVgd5NEOEWo7Yii9yVg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 狂雷图</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">一张有难度但不是特别难的狂雷+义警特技图 · 狂雷 · 豪丸</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/aZY5h41eVEqDyJD7VMXNxQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 狂雷图</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">一张火箭狂雷娱乐图(有些许难度) · 狂雷 · 豪丸</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/HxNcToVJkUe7utPApgS3qQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> JE's Challenge to QuoVadis8</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">给QuoVadis8做的火箭狂雷爽图 · 义警 · 爽啊图</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/5NWTPQBUKkeeQwxJZGsBuw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 东边日出西边雨</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">最帅的一张图 · 义警 · 这想象力无敌了</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/ZnZaukU6d0C3DiPDakftkg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                    <a href="bilibili.com/video/BV1Gni4BnEdi/?spm_id_from=333.1387.homepage.video_card.click" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,51,51,0.15); border: 1px solid #ff3333; border-radius: 25px; color: #ff6666; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.3s;">东边日出西边雨(系列最后一张)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 4. 精选喷射图 -->
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-rocket"></i>
+                            <span class="player-name">精选喷射图</span>
+                            <span class="video-count" style="background: rgba(255,204,0,0.15);">14个差事</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; padding: 15px;">
+                            
+                            <!-- 精选喷射图所有卡片 -->
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 超绝爽图</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">这个是真的爽 · 狂雷 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/XrBjOMpeGkC-B_ozkmK0Vw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 豪图</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">别看评分低 · 狂雷 · 其实这个真是爽图</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/KWbhKGAUDEOGihQScGbC4Q" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 基础小短图</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">简单的一 · 狂雷 · 适合新手玩</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/dDcvBuThsEOKsSjcA1RjEg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> ROCKET.REP #17</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 12好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/gSZl8A6pNkip1C8ydXbMsw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> [Vuela Turboo G48]</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 39好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/NZkBV61GLECFjZ7CN81btQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> ! Saltos R. Voltic #1.2</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 21好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/0Nsirl5v7EiHEDzhWFKitQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> [GM51] ROCKET.REP 11</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 7好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/7BE4AEJVkU-fmThJGGFAKQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> {E_} R.VolticSaltosKour 4</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 19好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/9i-zHnBa3EquIdZGNQ-FrA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> Saltos R.Voltic #6</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 7好评(爽图，除了终点有点毒)</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/elgXy_U1Zk2SagyA9prZ0Q" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 啊啊啊啊啊爽图</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">终点有点黑 · 狂雷 · 舒服</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/XrBjOMpeGkC-B_ozkmK0Vw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                    <a href="https://www.bilibili.com/video/BV1QZSuBMEHT/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,51,51,0.15); border: 1px solid #ff3333; border-radius: 25px; color: #ff6666; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.3s;">62连喷,真的爽啊</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> ロケットヴォルティック#1</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 15好评爽图</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/I5Ax37_nKkOpGJ5Vmkvmfw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                    <a href="https://www.bilibili.com/video/BV1yxiFBwEh2/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,51,51,0.15); border: 1px solid #ff3333; border-radius: 25px; color: #ff6666; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.3s;">U3nec0大佬做的一张火箭狂雷爽图</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> ロケットヴォルティック#2</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 29好评日本鸽爽图</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/pKBBQ0VtPE-pcmpUJnn9lA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                    <a href="https://www.bilibili.com/video/BV1toi8BpEMe/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,51,51,0.15); border: 1px solid #ff3333; border-radius: 25px; color: #ff6666; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.3s;">Rocket Voltic #2 [Easy]</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> ロケットヴォルティック#3</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 50好评日本鸽爽图</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/7pJLtsKDhEmu02tAfIE-2A" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                    <a href="https://www.bilibili.com/video/BV1moi8BpEv4/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,51,51,0.15); border: 1px solid #ff3333; border-radius: 25px; color: #ff6666; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.3s;">【GTAO】Rocket Voltic #3 [Hard]</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> ロケットヴォルティック#4</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">狂雷 · 80好评(爽图，木师傅精选的纯爽图)</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/waMkwbuzJkSICyNzIbca1g" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                    <a href="https://www.bilibili.com/video/BV1h5inBcEc3/?spm_id_from=333.337.search-card.all.click&vd_source=7cc441982868bc14300ee89dcccc3e32" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,51,51,0.15); border: 1px solid #ff3333; border-radius: 25px; color: #ff6666; text-decoration: none; font-size: 14px; font-weight: bold; transition: all 0.3s;">Rocket Voltic #4 [Normal]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5. 义警特技图 -->
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-magic"></i>
+                            <span class="player-name">义警特技图</span>
+                            <span class="video-count" style="background: rgba(255,204,0,0.15);">12个差事</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; padding: 15px;">
+                            
+                            <!-- 义警特技图1-12 -->
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速1</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/1YlxiFpldEiY4Fb3dY69KA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速2</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/fBSXAidCeUKDkPTxhbg9uQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速3</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/theQVdHlrEO7tLdrgai5hA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速4</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/0nVun_uK3UO5ZGSwV2VAXg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速5</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/ti3hsRm_7UeyL8Zo6TqL0g" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速6</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/tikL60VD7UqTPj1P9rqhlg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速7</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/4IG00f7Av0KywQp4a6WGuw" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速8</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/9u5HZzVosUy7YMMHrGskEA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速9</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/oA4ozojQhEKifOzY-AXlrA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速10</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/UkDWQ025Q0Ooxnhi5CO2IA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速11</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/FBWS5cyJcku5DTdtl3iglQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> 义警特技竞速12</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">义警特技竞速系列 · 义警 · 带派</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/dQ9Ko3po60ys5pJEU14jeA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 6. 图拉尔多喷射图 -->
+                <div class="video-player-group">
+                    <div class="player-group-header" onclick="toggleMainGroup(this)">
+                        <div class="player-group-title">
+                            <i class="fas fa-water"></i>
+                            <span class="player-name">图拉尔多喷射图</span>
+                            <span class="video-count" style="background: rgba(255,204,0,0.15);">5个差事</span>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="player-group-content">
+                        <div class="practices-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; padding: 15px;">
+                            
+                            <!-- 图拉尔多喷射图卡片 -->
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> [RED]LipaoMegaSkill 19</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">图拉尔多 · 8好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/hDxVF3srSEabyJo9qN3NdA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> [RED] LipaoMegaSkill 29</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">图拉尔多 · 12好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/-_1W0l-nM0uUFFzvrCo54Q" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> {E_} MULTI Saltos Turbo</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">图拉尔多 · 23好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/Jka2pzkPmkqlosHyQV_tFQ" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> Kawaii Skill Test XL-9</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">图拉尔多 · 20好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/gA58YXsnbU6zhXLD6qdcmA" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-card" style="margin: 0; width: 100%; display: flex; flex-direction: column; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); border-radius: 8px; padding: 20px; border-left: 4px solid #ffcc00;">
+                                <h3 style="font-size: 18px; margin-bottom: 10px; color: #ffcc00; display: flex; align-items: center; gap: 8px;"><i class="fas fa-users"></i> Toreador SuperSkillz</h3>
+                                <p style="color: #aaaaaa; margin-bottom: 15px; font-size: 14px;">图拉尔多 · 10好评</p>
+                                <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="https://socialclub.rockstargames.com/job/gtav/aRjz71crJUG9IJkK6hSGxg" class="practice-link" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; padding: 8px 16px; background: rgba(255,204,0,0.1); border: 1px solid #ffcc00; border-radius: 25px; color: #ffcc00; text-decoration: none; font-size: 14px; transition: all 0.3s;">跳转差事</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 脚注提示 -->
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 204, 0, 0.1);">
+                <p style="color: #666; font-size: 14px;">
+                    <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
+                    想要分享您的差事？通过建议反馈告诉我们！
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
     
    
     <!-- 页脚 -->
@@ -3607,342 +3843,320 @@
     </footer>
     
     <script>
-        // 简单的复制QQ群号功能
-        document.querySelector('.btn[href="#"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            const qqNumber = '1067206166';
-            navigator.clipboard.writeText(qqNumber).then(function() {
-               
-            }, function(err) {
-                alert('复制失败，请手动复制: ' + qqNumber);
-            });
-         });
-        
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-                // 初始化建议系统
-        document.addEventListener('DOMContentLoaded', function() {
-            // 确保消息框初始隐藏
-            const successMsg = document.getElementById('successMessage');
-            const errorMsg = document.getElementById('errorMessage');
-            if (successMsg) successMsg.style.display = 'none';
-            if (errorMsg) errorMsg.style.display = 'none';
-            
-            // 初始字符计数
-            updateCharCount();
-            
-            // ... 其他初始化代码 ...
-        });
-        // ============ 建议系统功能 ============
-        // Formspree配置 - 替换为您的Formspree表单ID
-        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwpgnzqo';
-        
-        // 分类选择功能
-        function selectCategory(element) {
-            // 移除所有选项的active类
-            document.querySelectorAll('.category-option').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // 为当前选项添加active类
-            element.classList.add('active');
-            
-            // 设置隐藏输入框的值
-            const categoryInput = document.getElementById('category');
-            categoryInput.value = element.dataset.value;
-            
-            // 添加点击动画
-            element.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                element.style.transform = '';
-            }, 150);
-        }
-        
-        // 字符计数
-        function updateCharCount() {
-            const textarea = document.getElementById('suggestion-text');
-            const charCount = document.getElementById('charCount');
-            const container = document.getElementById('charCountContainer');
-            
-            if (!textarea || !charCount || !container) return;
-            
-            const length = textarea.value.length;
-            charCount.textContent = length;
-            
-            container.className = 'character-count';
-            if (length > 400) {
-                container.classList.add('warning');
-            }
-            if (length > 480) {
-                container.classList.add('error');
-            }
-        }
-        
-        // 获取建议类型文本
-        function getCategoryText(category) {
-            const categories = {
-                'design': '网站设计',
-                'content': '内容更新',
-                'feature': '功能建议',
-                'bug': '问题反馈',
-                'other': '其他建议'
-            };
-            return categories[category] || '未知类型';
-        }
-        
-        // 提交建议到Formspree
-        // 修改submitSuggestion函数
-async function submitSuggestion(e) {
-    if (e) e.preventDefault();
-    
-    const category = document.getElementById('category').value;
-    const suggestion = document.getElementById('suggestion-text').value.trim();
-    const name = document.getElementById('suggestion-name').value.trim();
-    
-    // 验证
-    if (!category) {
-        showSuggestionError('请选择建议类型');
-        document.getElementById('category').focus();
-        return false;
-    }
-    
-    if (!suggestion) {
-        showSuggestionError('请填写建议内容');
-        document.getElementById('suggestion-text').focus();
-        return false;
-    }
-    
-    if (suggestion.length < 5) {
-        showSuggestionError('建议内容太短，请详细描述（至少5个字符）');
-        document.getElementById('suggestion-text').focus();
-        return false;
-    }
-    
-    // 禁用按钮，防止重复提交
-    const btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>正在提交...</span>';
-    
-    // 清除错误信息
-    hideSuggestionError();
-    
-    try {
-        // 直接提交表单
-        const form = document.getElementById('suggestion-form');
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
-        if (response.ok) {
-            // 提交成功
-            showSuggestionSuccess();
-            resetSuggestionForm();
-        } else {
-            showSuggestionError('提交失败，请稍后重试');
-        }
-    } catch (error) {
-        console.error('提交错误:', error);
-        showSuggestionError('网络错误，请检查网络连接后重试');
-    } finally {
-        // 3秒后恢复按钮
-        setTimeout(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-paper-plane"></i><span>提交建议</span>';
-        }, 3000);
-    }
-    
-    return false;
-}
-
-// 修改事件监听
-document.addEventListener('DOMContentLoaded', function() {
-    // 添加表单提交事件
-    const form = document.getElementById('suggestion-form');
-    if (form) {
-        form.addEventListener('submit', submitSuggestion);
-    }
-    
-    // 其他代码保持不变...
-});
-        // 显示成功消息
-        function showSuggestionSuccess() {
-            const successMsg = document.getElementById('successMessage');
-            successMsg.style.display = 'flex';
-            
-            // 5秒后自动隐藏
-            setTimeout(() => {
-                successMsg.style.display = 'none';
-            }, 5000);
-        }
-        
-        // 显示错误消息
-        function showSuggestionError(message) {
-            const errorMsg = document.getElementById('errorMessage');
-            const errorText = document.getElementById('errorText');
-            
-            errorText.textContent = message;
-            errorMsg.style.display = 'flex';
-            
-            // 自动滚动到错误信息
-            errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // 5秒后自动隐藏
-            setTimeout(() => {
-                hideSuggestionError();
-            }, 5000);
-        }
-        
-        // 隐藏错误消息
-        function hideSuggestionError() {
-            const errorMsg = document.getElementById('errorMessage');
-            if (errorMsg) {
-                errorMsg.style.display = 'none';
-            }
-        }
-        
-        // 重置表单
-function resetSuggestionForm() {
-    // 清除输入字段
-    const category = document.getElementById('category');
-    const suggestionText = document.getElementById('suggestion-text');
-    const name = document.getElementById('suggestion-name');
-    
-    if (category) category.value = '';
-    if (suggestionText) suggestionText.value = '';
-    if (name) name.value = '';
-    
-    // 清除选择的分类按钮
-    document.querySelectorAll('.category-option').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    
-    // 清除本地存储
-    const formFields = ['category', 'suggestion-text', 'suggestion-name'];
-    formFields.forEach(fieldId => {
-        localStorage.removeItem(`suggestion_${fieldId}`);
-    });
-    
-    // 清除sessionStorage标记（可选）
-    sessionStorage.removeItem('formSubmitted');
-    
-    // 重置字符计数
-    updateCharCount();
-}
-        
-        // 初始化建议系统
-        document.addEventListener('DOMContentLoaded', function() {
-            // 初始字符计数
-            updateCharCount();
-            
-            // 监听建议文本框输入
-            const suggestionText = document.getElementById('suggestion-text');
-            if (suggestionText) {
-                suggestionText.addEventListener('input', updateCharCount);
-            }
-            
-            // 添加键盘快捷键
-            document.addEventListener('keydown', function(e) {
-                // Ctrl + Enter 提交建议
-                if (e.ctrlKey && e.key === 'Enter' && 
-                    document.activeElement.id === 'suggestion-text') {
-                    const btn = document.getElementById('submitBtn');
-                    if (btn && !btn.disabled) {
-                        submitSuggestion();
-                    }
-                }
-            });
-            
-            // 为所有输入框添加焦点效果
-            const inputs = document.querySelectorAll('.suggestion-form input, .suggestion-form textarea');
-            inputs.forEach(input => {
-                input.addEventListener('focus', function() {
-                    this.parentElement.classList.add('focused');
-                });
-                
-                input.addEventListener('blur', function() {
-                    this.parentElement.classList.remove('focused');
-                });
-            });
-            
-            // 表单字段自动保存到本地存储（防止意外关闭）
-            const formFields = ['category', 'suggestion-text', 'suggestion-name'];
-            
-            formFields.forEach(fieldId => {
-                const field = document.getElementById(fieldId);
-                if (field) {
-                    // 加载保存的值
-                    const savedValue = localStorage.getItem(`suggestion_${fieldId}`);
-                    if (savedValue && fieldId !== 'category') {
-                        field.value = savedValue;
-                    } else if (savedValue && fieldId === 'category') {
-                        field.value = savedValue;
-                    }
-                    
-                    // 保存输入的值
-                    field.addEventListener('input', function() {
-                        localStorage.setItem(`suggestion_${fieldId}`, this.value);
-                    });
-                }
-            });
-        });
-         // 全局切换函数 —— 点击头部展开/收起当前组
-    window.toggleGroup = function(headerElement) {
-        // 获取当前组的内容区域 (.player-group-content)
+         // 一级折叠切换函数（用于主分类）
+    window.toggleMainGroup = function(headerElement) {
         const group = headerElement.closest('.video-player-group');
         const content = group.querySelector('.player-group-content');
         const icon = headerElement.querySelector('.toggle-icon i');
         
-        // 切换active类（用于图标旋转）
         headerElement.classList.toggle('active');
         
         if (content.classList.contains('expanded')) {
-            // 收起
             content.classList.remove('expanded');
             if (icon) icon.className = 'fas fa-chevron-down';
         } else {
-            // 展开前先把其他打开的组关闭 (实现手风琴效果，可选)
-            // 如果想保留多个同时展开，注释掉下面for循环即可
-            const allContents = document.querySelectorAll('.player-group-content');
-            const allHeaders = document.querySelectorAll('.player-group-header');
-            allContents.forEach(c => {
-                if (c !== content) c.classList.remove('expanded');
-            });
-            allHeaders.forEach(h => {
-                if (h !== headerElement) h.classList.remove('active');
-                const otherIcon = h.querySelector('.toggle-icon i');
-                if (otherIcon && h !== headerElement) otherIcon.className = 'fas fa-chevron-down';
-            });
-            
-            // 展开当前
             content.classList.add('expanded');
             if (icon) icon.className = 'fas fa-chevron-up';
         }
     };
 
-    // 初始化：保证所有组默认收起 (并且图标正确)
+    // 二级折叠切换函数（用于小分类）
+    window.toggleSubGroup = function(headerElement) {
+        const group = headerElement.closest('.video-player-group');
+        const content = group.querySelector('.player-group-content');
+        const icon = headerElement.querySelector('.toggle-icon i');
+        
+        headerElement.classList.toggle('active');
+        
+        if (content.classList.contains('expanded')) {
+            content.classList.remove('expanded');
+            if (icon) icon.className = 'fas fa-chevron-down';
+        } else {
+            content.classList.add('expanded');
+            if (icon) icon.className = 'fas fa-chevron-up';
+        }
+    };
+
+    // 简单的复制QQ群号功能
+    document.querySelector('.btn[href="#"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        const qqNumber = '1067206166';
+        navigator.clipboard.writeText(qqNumber).then(function() {
+            alert('QQ群号已复制: ' + qqNumber);
+        }, function(err) {
+            alert('复制失败，请手动复制: ' + qqNumber);
+        });
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if(targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // 初始化建议系统
     document.addEventListener('DOMContentLoaded', function() {
-        const groups = document.querySelectorAll('.video-player-group');
-        groups.forEach(group => {
+        // 确保消息框初始隐藏
+        const successMsg = document.getElementById('successMessage');
+        const errorMsg = document.getElementById('errorMessage');
+        if (successMsg) successMsg.style.display = 'none';
+        if (errorMsg) errorMsg.style.display = 'none';
+        
+        // 初始字符计数
+        updateCharCount();
+    });
+    
+    // ============ 建议系统功能 ============
+    // Formspree配置
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwpgnzqo';
+    
+    // 分类选择功能
+    function selectCategory(element) {
+        // 移除所有选项的active类
+        document.querySelectorAll('.category-option').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // 为当前选项添加active类
+        element.classList.add('active');
+        
+        // 设置隐藏输入框的值
+        const categoryInput = document.getElementById('category');
+        categoryInput.value = element.dataset.value;
+        
+        // 添加点击动画
+        element.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            element.style.transform = '';
+        }, 150);
+    }
+    
+    // 字符计数
+    function updateCharCount() {
+        const textarea = document.getElementById('suggestion-text');
+        const charCount = document.getElementById('charCount');
+        const container = document.getElementById('charCountContainer');
+        
+        if (!textarea || !charCount || !container) return;
+        
+        const length = textarea.value.length;
+        charCount.textContent = length;
+        
+        container.className = 'character-count';
+        if (length > 400) {
+            container.classList.add('warning');
+        }
+        if (length > 480) {
+            container.classList.add('error');
+        }
+    }
+    
+    // 提交建议到Formspree
+    async function submitSuggestion(e) {
+        if (e) e.preventDefault();
+        
+        const category = document.getElementById('category').value;
+        const suggestion = document.getElementById('suggestion-text').value.trim();
+        const name = document.getElementById('suggestion-name').value.trim();
+        
+        // 验证
+        if (!category) {
+            showSuggestionError('请选择建议类型');
+            document.getElementById('category').focus();
+            return false;
+        }
+        
+        if (!suggestion) {
+            showSuggestionError('请填写建议内容');
+            document.getElementById('suggestion-text').focus();
+            return false;
+        }
+        
+        if (suggestion.length < 5) {
+            showSuggestionError('建议内容太短，请详细描述（至少5个字符）');
+            document.getElementById('suggestion-text').focus();
+            return false;
+        }
+        
+        // 禁用按钮，防止重复提交
+        const btn = document.getElementById('submitBtn');
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>正在提交...</span>';
+        
+        // 清除错误信息
+        hideSuggestionError();
+        
+        try {
+            // 直接提交表单
+            const form = document.getElementById('suggestion-form');
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // 提交成功
+                showSuggestionSuccess();
+                resetSuggestionForm();
+            } else {
+                showSuggestionError('提交失败，请稍后重试');
+            }
+        } catch (error) {
+            console.error('提交错误:', error);
+            showSuggestionError('网络错误，请检查网络连接后重试');
+        } finally {
+            // 3秒后恢复按钮
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i><span>提交建议</span>';
+            }, 3000);
+        }
+        
+        return false;
+    }
+    
+    // 显示成功消息
+    function showSuggestionSuccess() {
+        const successMsg = document.getElementById('successMessage');
+        successMsg.style.display = 'flex';
+        
+        // 5秒后自动隐藏
+        setTimeout(() => {
+            successMsg.style.display = 'none';
+        }, 5000);
+    }
+    
+    // 显示错误消息
+    function showSuggestionError(message) {
+        const errorMsg = document.getElementById('errorMessage');
+        const errorText = document.getElementById('errorText');
+        
+        errorText.textContent = message;
+        errorMsg.style.display = 'flex';
+        
+        // 自动滚动到错误信息
+        errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // 5秒后自动隐藏
+        setTimeout(() => {
+            hideSuggestionError();
+        }, 5000);
+    }
+    
+    // 隐藏错误消息
+    function hideSuggestionError() {
+        const errorMsg = document.getElementById('errorMessage');
+        if (errorMsg) {
+            errorMsg.style.display = 'none';
+        }
+    }
+    
+    // 重置表单
+    function resetSuggestionForm() {
+        // 清除输入字段
+        const category = document.getElementById('category');
+        const suggestionText = document.getElementById('suggestion-text');
+        const name = document.getElementById('suggestion-name');
+        
+        if (category) category.value = '';
+        if (suggestionText) suggestionText.value = '';
+        if (name) name.value = '';
+        
+        // 清除选择的分类按钮
+        document.querySelectorAll('.category-option').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // 清除本地存储
+        const formFields = ['category', 'suggestion-text', 'suggestion-name'];
+        formFields.forEach(fieldId => {
+            localStorage.removeItem(`suggestion_${fieldId}`);
+        });
+        
+        // 重置字符计数
+        updateCharCount();
+    }
+    
+    // 初始化建议系统
+    document.addEventListener('DOMContentLoaded', function() {
+        // 添加表单提交事件
+        const form = document.getElementById('suggestion-form');
+        if (form) {
+            form.addEventListener('submit', submitSuggestion);
+        }
+        
+        // 初始字符计数
+        updateCharCount();
+        
+        // 监听建议文本框输入
+        const suggestionText = document.getElementById('suggestion-text');
+        if (suggestionText) {
+            suggestionText.addEventListener('input', updateCharCount);
+        }
+        
+        // 添加键盘快捷键
+        document.addEventListener('keydown', function(e) {
+            // Ctrl + Enter 提交建议
+            if (e.ctrlKey && e.key === 'Enter' && 
+                document.activeElement.id === 'suggestion-text') {
+                const btn = document.getElementById('submitBtn');
+                if (btn && !btn.disabled) {
+                    submitSuggestion();
+                }
+            }
+        });
+        
+        // 为所有输入框添加焦点效果
+        const inputs = document.querySelectorAll('.suggestion-form input, .suggestion-form textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.classList.remove('focused');
+            });
+        });
+        
+        // 表单字段自动保存到本地存储
+        const formFields = ['category', 'suggestion-text', 'suggestion-name'];
+        
+        formFields.forEach(fieldId => {
+            const field = document.getElementById(fieldId);
+            if (field) {
+                // 加载保存的值
+                const savedValue = localStorage.getItem(`suggestion_${fieldId}`);
+                if (savedValue && fieldId !== 'category') {
+                    field.value = savedValue;
+                } else if (savedValue && fieldId === 'category') {
+                    field.value = savedValue;
+                }
+                
+                // 保存输入的值
+                field.addEventListener('input', function() {
+                    localStorage.setItem(`suggestion_${fieldId}`, this.value);
+                });
+            }
+        });
+
+        // 初始化折叠组
+        const mainGroups = document.querySelectorAll('.video-player-group');
+        mainGroups.forEach(group => {
             const header = group.querySelector('.player-group-header');
             const content = group.querySelector('.player-group-content');
             const icon = header?.querySelector('.toggle-icon i');
@@ -3951,79 +4165,50 @@ function resetSuggestionForm() {
             if (header) header.classList.remove('active');
             if (icon) icon.className = 'fas fa-chevron-down';
         });
-
-        // 修复复制QQ按钮事件冲突 (原页面存在)
-        const copyBtn = document.querySelector('.btn[href="#"]');
-        if (copyBtn) {
-            copyBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                const qqNumber = '1067206166';
-                navigator.clipboard.writeText(qqNumber).then(() => {
-                    alert('QQ群号已复制: ' + qqNumber); // 加个简单提示
-                }, () => {
-                    alert('复制失败，请手动复制: ' + qqNumber);
-                });
-            });
-        }
-
-        // 平滑滚动保留
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
     });
-    // ===== 吉祥物军团摸摸头 =====
-window.petSquadMascot = function(btn, name) {
-    // 按钮反馈
-    const originalHTML = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-heart"></i> 嗷～';
-    btn.style.background = '#ff66aa';
-    btn.style.borderColor = '#ffcc00';
-    btn.style.color = '#0a0a0a';
-    
-    // 头像弹跳
-    const avatar = btn.closest('.mascot-squad-item').querySelector('.mascot-squad-avatar i, .mascot-squad-img');
-    if (avatar) {
-        avatar.style.transform = 'scale(1.2)';
-        avatar.style.transition = 'transform 0.15s';
-        setTimeout(() => {
-            avatar.style.transform = 'scale(1)';
-        }, 150);
-    }
-    
-    // 摸头计数
-    const countEl = document.getElementById('mascotPatCount');
-    if (countEl) {
-        let count = parseInt(countEl.innerText) || 0;
-        countEl.innerText = count + 1;
-    }
-    
-    // 2秒后恢复
-    setTimeout(() => {
-        btn.innerHTML = originalHTML;
-        btn.style.background = 'rgba(0, 255, 255, 0.1)';
-        btn.style.borderColor = '#00ffff';
-        btn.style.color = '#00ffff';
-    }, 1500);
-};
 
-// 初始化摸头计数（随机）
-document.addEventListener('DOMContentLoaded', function() {
-    const countEl = document.getElementById('mascotPatCount');
-    if (countEl) {
-        countEl.innerText = Math.floor(0);
-    }
-});
+    // ===== 吉祥物军团摸摸头 =====
+    window.petSquadMascot = function(btn, name) {
+        // 按钮反馈
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-heart"></i> 嗷～';
+        btn.style.background = '#ff66aa';
+        btn.style.borderColor = '#ffcc00';
+        btn.style.color = '#0a0a0a';
+        
+        // 头像弹跳
+        const avatar = btn.closest('.mascot-squad-item').querySelector('.mascot-squad-avatar i, .mascot-squad-img');
+        if (avatar) {
+            avatar.style.transform = 'scale(1.2)';
+            avatar.style.transition = 'transform 0.15s';
+            setTimeout(() => {
+                avatar.style.transform = 'scale(1)';
+            }, 150);
+        }
+        
+        // 摸头计数
+        const countEl = document.getElementById('mascotPatCount');
+        if (countEl) {
+            let count = parseInt(countEl.innerText) || 0;
+            countEl.innerText = count + 1;
+        }
+        
+        // 2秒后恢复
+        setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.style.background = 'rgba(0, 255, 255, 0.1)';
+            btn.style.borderColor = '#00ffff';
+            btn.style.color = '#00ffff';
+        }, 1500);
+    };
+
+    // 初始化摸头计数
+    document.addEventListener('DOMContentLoaded', function() {
+        const countEl = document.getElementById('mascotPatCount');
+        if (countEl) {
+            countEl.innerText = Math.floor(0);
+        }
+    });
     </script>
 </body>
 </html>
