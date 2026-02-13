@@ -3616,7 +3616,7 @@
             }, function(err) {
                 alert('复制失败，请手动复制: ' + qqNumber);
             });
-        });
+         });
         
         // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -4004,7 +4004,7 @@ window.petSquadMascot = function(btn, name) {
     // 摸头计数
     const countEl = document.getElementById('mascotPatCount');
     if (countEl) {
-        let count = parseInt(countEl.innerText) || 27;
+        let count = parseInt(countEl.innerText) || 0;
         countEl.innerText = count + 1;
     }
     
@@ -4021,7 +4021,7 @@ window.petSquadMascot = function(btn, name) {
 document.addEventListener('DOMContentLoaded', function() {
     const countEl = document.getElementById('mascotPatCount');
     if (countEl) {
-        countEl.innerText = Math.floor(Math.random() * 30 + 15);
+        countEl.innerText = Math.floor(0);
     }
 });
     </script>
