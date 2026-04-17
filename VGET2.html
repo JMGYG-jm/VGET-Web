@@ -1908,6 +1908,59 @@
             color: #666;
             font-size: 14px;
         }
+         /* ========= 视频开屏动画样式 ========= */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .splash-screen.hide {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+        
+        .splash-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .main-content {
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+        
+        .main-content.visible {
+            opacity: 1;
+        }
+        
+        .skip-btn {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(0,0,0,0.6);
+            color: #ffcc00;
+            border: 1px solid #ffcc00;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            z-index: 10001;
+            font-size: 14px;
+        }
+        
+        .skip-btn:hover {
+            background: #ffcc00;
+            color: #000;
+        }
         
         /* 响应式设计 */
         @media (max-width: 768px) {
@@ -1953,9 +2006,21 @@
 				    margin-bottom: 10px;
             }
         }
+        
     </style>
 </head>
 <body>
+     <!-- 视频开屏动画 -->
+    <div class="splash-screen" id="splashScreen">
+        <video id="splashVideo" class="splash-video" autoplay muted playsinline>
+            <source src="begin.mp4" type="video/mp4">
+            <!-- 如果视频格式不同，可以修改上面的文件名和类型 -->
+        </video>
+        <button class="skip-btn" id="skipBtn">跳过动画 ⏭</button>
+    </div>
+
+    <!-- 网站主体内容 -->
+    <div class="main-content" id="mainContent">
     <!-- 背景图容器 -->
     <div class="background-container">
         <!-- 这里可以替换为您自己的背景图 -->
@@ -1994,25 +2059,49 @@
         </div>
     </section>
      <!-- 联系方式 -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>加入我们</h2>
-            </div>
-            <div class="contact-content">
-                <p>如果您对义警充满热情，并希望加入ViGi Elite Team</p>
-                <p>请通过以下方式联系我们：</p>
-                <div class="qq-group">
-                    <h3>帮会QQ群</h3>
-                    <div class="qq-number">1067206166</div>
-                    <p>加入群聊后，请认真查看群公告</p>
+            <!-- 联系方式 -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-title"><h2>加入我们</h2></div>
+                <div class="contact-content">
+                    <p>如果您对义警充满热情，并希望加入ViGi Elite Team</p>
+                    
+                    <!-- 主群 -->
+                    <div class="qq-group">
+                        <h3>帮会QQ群 <span style="font-size:18px; background:#ffcc00; color:#000; padding:2px 10px; border-radius:20px;">VGET</span></h3>
+                        <div class="qq-number">1067206166</div>
+                        <p>加入群聊后，请认真查看群公告</p>
+                    </div>
+                      <a href="#" class="btn" id="copyQQBtn">复制VGET群号</a>
+                    <!-- 两个小框框（其他群） -->
+                    <div style="display: flex; gap: 20px; justify-content: center; margin: 30px 0; flex-wrap: wrap;">
+                        <!-- 小框 1 -->
+                        <div style="background: rgba(30,30,30,0.8); border: 1px solid rgba(255,204,0,0.3); border-radius: 12px; padding: 15px 25px; text-align: center; min-width: 160px; transition: all 0.3s;">
+                            <i class="fab fa-qq" style="color: #ffcc00; font-size: 24px; margin-bottom: 8px; display: inline-block;"></i>
+                            <div style="font-size: 12px; color: #ffcc00; margin-bottom: 5px;">VIGA</div>
+                            <div style="font-size: 20px; font-weight: bold; color: #fff; letter-spacing: 1px;">1011265902</div>
+                            <button class="copy-mini-btn" data-qq="1011265902" style="margin-top: 10px; background: rgba(255,204,0,0.2); border: 1px solid #ffcc00; color: #ffcc00; padding: 4px 12px; border-radius: 20px; font-size: 12px; cursor: pointer;">复制群号</button>
+                        </div>
+                        
+                        <!-- 小框 2 -->
+                        <div style="background: rgba(30,30,30,0.8); border: 1px solid rgba(255,204,0,0.3); border-radius: 12px; padding: 15px 25px; text-align: center; min-width: 160px; transition: all 0.3s;">
+                            <i class="fab fa-qq" style="color: #ffcc00; font-size: 24px; margin-bottom: 8px; display: inline-block;"></i>
+                            <div style="font-size: 12px; color: #ffcc00; margin-bottom: 5px;">CCYX</div>
+                            <div style="font-size: 20px; font-weight: bold; color: #fff; letter-spacing: 1px;">454907615</div>
+                            <button class="copy-mini-btn" data-qq="454907615" style="margin-top: 10px; background: rgba(255,204,0,0.2); border: 1px solid #ffcc00; color: #ffcc00; padding: 4px 12px; border-radius: 20px; font-size: 12px; cursor: pointer;">复制群号</button>
+                        </div>
+                        <div style="background: rgba(30,30,30,0.8); border: 1px solid rgba(255,204,0,0.3); border-radius: 12px; padding: 15px 25px; text-align: center; min-width: 160px; transition: all 0.3s;">
+                            <i class="fab fa-qq" style="color: #ffcc00; font-size: 24px; margin-bottom: 8px; display: inline-block;"></i>
+                            <div style="font-size: 12px; color: #ffcc00; margin-bottom: 5px;">ARMT</div>
+                            <div style="font-size: 20px; font-weight: bold; color: #fff; letter-spacing: 1px;">748741364</div>
+                            <button class="copy-mini-btn" data-qq="748741364" style="margin-top: 10px; background: rgba(255,204,0,0.2); border: 1px solid #ffcc00; color: #ffcc00; padding: 4px 12px; border-radius: 20px; font-size: 12px; cursor: pointer;">复制群号</button>
+                        </div>
+                    </div>
+                    
+                  
                 </div>
-                
-                <p>我们期待您的加入！</p>
-                <a href="#" class="btn">复制QQ群号</a>
             </div>
-        </div>
-    </section>
+        </section>
     
     <!-- 关于帮会 -->
     <section id="about">
@@ -4193,6 +4282,73 @@
     </footer>
     
     <script>
+                       // ========= 视频开屏动画逻辑（简化版，保证能滚动）=========
+        (function() {
+            const splash = document.getElementById('splashScreen');
+            const mainContent = document.getElementById('mainContent');
+            const video = document.getElementById('splashVideo');
+            const skipBtn = document.getElementById('skipBtn');
+            
+            // 禁止滚动
+            function lockScroll() {
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // 恢复滚动
+            function unlockScroll() {
+                document.body.style.overflow = '';
+            }
+            
+            // 滚动到页面顶部
+            function scrollToTop() {
+                window.scrollTo(0, 0);
+            }
+            
+            if (mainContent) {
+                mainContent.style.opacity = '0';
+            }
+            
+            lockScroll();
+            
+            function finishSplash() {
+                if (mainContent) {
+                    mainContent.classList.add('visible');
+                    mainContent.style.opacity = '1';
+                }
+                
+                scrollToTop();
+                unlockScroll();
+                
+                splash.classList.add('hide');
+                
+                setTimeout(function() {
+                    if (splash && splash.parentNode) {
+                        splash.style.display = 'none';
+                    }
+                    if (video) {
+                        video.pause();
+                    }
+                }, 500);
+            }
+            
+            if (video) {
+                video.addEventListener('ended', finishSplash);
+                video.addEventListener('error', finishSplash);
+            }
+            
+            if (skipBtn) {
+                skipBtn.addEventListener('click', function() {
+                    finishSplash();
+                });
+            }
+            
+            setTimeout(function() {
+                if (splash && !splash.classList.contains('hide')) {
+                    finishSplash();
+                }
+            }, 8000);
+        })();
+        
          // 一级折叠切换函数（用于主分类）
     window.toggleMainGroup = function(headerElement) {
         const group = headerElement.closest('.video-player-group');
@@ -4228,16 +4384,55 @@
     };
 
     // 简单的复制QQ群号功能
-    document.querySelector('.btn[href="#"]').addEventListener('click', function(e) {
-        e.preventDefault();
-        const qqNumber = '1067206166';
-        navigator.clipboard.writeText(qqNumber).then(function() {
-            alert('QQ群号已复制: ' + qqNumber);
-        }, function(err) {
-            alert('复制失败，请手动复制: ' + qqNumber);
+            // ========= 复制QQ群号（无弹窗，显示对号）=========
+        const copyBtn = document.getElementById('copyQQBtn');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const qqNumber = '1067206166';
+                const btn = this;
+                const originalText = btn.innerText;
+                
+                navigator.clipboard.writeText(qqNumber).then(function() {
+                    // 改变按钮文字和样式
+                    btn.innerText = '✓ 已复制';
+                    btn.style.background = '#52c41a';
+                    btn.style.color = '#fff';
+                    btn.style.border = 'none';
+                    
+                    // 1.5秒后恢复原样
+                    setTimeout(function() {
+                        btn.innerText = originalText;
+                        btn.style.background = '#ffcc00';
+                        btn.style.color = '#0a0a0a';
+                    }, 1500);
+                }).catch(function() {
+                    btn.innerText = '✗ 失败';
+                    setTimeout(function() {
+                        btn.innerText = originalText;
+                    }, 1500);
+                });
+            });
+        }
+            // 小框框复制功能
+        document.querySelectorAll('.copy-mini-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const textToCopy = this.getAttribute('data-qq');
+                navigator.clipboard.writeText(textToCopy).then(function() {
+                    const originalText = btn.innerText;
+                    btn.innerText = '已复制 ✓';
+                    btn.style.background = '#ffcc00';
+                    btn.style.color = '#000';
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.style.background = 'rgba(255,204,0,0.2)';
+                        btn.style.color = '#ffcc00';
+                    }, 1500);
+                });
+            });
         });
-    });
-    
     // 平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
